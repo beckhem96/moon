@@ -2,9 +2,126 @@
   "pensive-bodhisattva-4358": {
     "sourceFormat": "OBJ",
     "sourceSizeMB": 62.9,
-    "publishedSizeMB": 1.3,
-    "reductionPct": 97.9,
+    "publishedSizeMB": 1.27,
+    "reductionPct": 98,
     "triangles": 267560,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-12"
+  },
+  "pensive-bodhisattva-1256": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 55.5,
+    "publishedSizeMB": 1.03,
+    "reductionPct": 98.1,
+    "triangles": 266867,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-12"
+  },
+  "moon-jar": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 37.22,
+    "publishedSizeMB": 0.32,
+    "reductionPct": 99.1,
+    "triangles": 110408,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-12"
+  },
+  "celadon-maebyeong-waterfowl": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 73.8,
+    "publishedSizeMB": 1.04,
+    "reductionPct": 98.6,
+    "triangles": 321248,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-12"
+  },
+  "comb-pattern-pottery": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 35.04,
+    "publishedSizeMB": 1.54,
+    "reductionPct": 95.6,
+    "triangles": 381445,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-12"
+  },
+  "spouted-pottery": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 42.11,
+    "publishedSizeMB": 0.6,
+    "reductionPct": 98.6,
+    "triangles": 95707,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-12"
+  },
+  "dagger-hilt-bronze": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 51.37,
+    "publishedSizeMB": 0.79,
+    "reductionPct": 98.5,
+    "triangles": 57470,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-12"
+  },
+  "shield-shaped-bronze": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 34.51,
+    "publishedSizeMB": 0.63,
+    "reductionPct": 98.2,
+    "triangles": 40228,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-12"
+  },
+  "gold-buckle-seokamri": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 119.43,
+    "publishedSizeMB": 2.74,
+    "reductionPct": 97.7,
+    "triangles": 155652,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-12"
+  },
+  "iron-buddha": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 74.38,
+    "publishedSizeMB": 1.29,
+    "reductionPct": 98.3,
+    "triangles": 169818,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-12"
+  },
+  "bronze-vajra-bell": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 74.83,
+    "publishedSizeMB": 1.24,
+    "reductionPct": 98.3,
+    "triangles": 219130,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-12"
+  },
+  "celadon-pomegranate-ewer": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 53.4,
+    "publishedSizeMB": 0.93,
+    "reductionPct": 98.3,
+    "triangles": 179294,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-12"
+  },
+  "white-porcelain-bottle": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 36.1,
+    "publishedSizeMB": 0.36,
+    "reductionPct": 99,
+    "triangles": 139979,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-12"
+  },
+  "gold-cap": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 9.77,
+    "publishedSizeMB": 1.25,
+    "reductionPct": 87.2,
+    "triangles": 62811,
     "pipelineVersion": "1.0.0",
     "processedAt": "2026-06-12"
   }

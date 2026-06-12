@@ -1,0 +1,24 @@
+{
+  "id": "spouted-pottery",
+  "title": "주구토기",
+  "titleHanja": "注口杯",
+  "era": "신라",
+  "material": "흙",
+  "description": "go.kr 주소를 사용하는 누리집은 대한민국 정부기관이 관리하는 누리집입니다. 이 밖에 or.kr 또는 .kr등 다른 도메인 주소를 사용하고 있다면 아래 URL에서 도메인 주소를 확인해 보세요.",
+  "museum": "국립중앙박물관",
+  "collectionNo": "K번38",
+  "attribution": {
+    "kogl": 1,
+    "provider": "국립중앙박물관",
+    "sourceUrl": "https://www.museum.go.kr/MUSEUM/contents/M0505000000.do?schM=view&searchId=search&relicId=36560664"
+  },
+  "sources": [
+    "국립중앙박물관 소장품 3D 상세(2026-06-12 수집)"
+  ],
+  "suggestedQuestions": [
+    "이 유물은 무엇에 쓰던 물건인가요?",
+    "어느 시대에 만들어졌고, 그 시대는 어떤 모습이었나요?",
+    "이 유물에서 눈여겨볼 부분은 어디인가요?"
+  ],
+  "featured": false
+}

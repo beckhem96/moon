@@ -99,7 +99,7 @@ erDiagram
 
 | 메서드·경로 | 요청 | 응답 | 정책 |
 |---|---|---|---|
-| `POST /api/docent` | `{ artifactId, messages[] }` (zod 검증, messages ≤ 10) | `text/event-stream` 텍스트 스트림 | IP 레이트리밋(분당 5), maxTokens 상한, 키 미설정 시 mock (AC-F4-4) |
+| `POST /api/docent` | `{ artifactId, messages[] }` (zod 검증, messages ≤ 20) | 평문 텍스트 청크 스트림 (`text/plain`, 구현 2026-06-13) | IP 레이트리밋(분당 5), maxTokens 상한, 키 미설정 시 mock (AC-F4-4) |
 | `GET /api/tourism?siteId=` | siteId | `TourismInfo[]` (내부 모델, ACL 통과분) | `revalidate: 3600` 캐시, 실패 시 `content/tourism-snapshot.json` 폴백 + `snapshotAt` 표기 (AC-F5-3) |
 
 유물 목록/단건은 API로 제공하지 않는다 — SSG에 빌드타임 주입(외부 공개 API는 범위 외).
@@ -123,6 +123,12 @@ erDiagram
 - 실행: `npm run pipeline -- <id>` 한 줄로 2~5 일괄.
 - **M1 게이트(6/14)**: 유물 1점이 전 단계 통과 + 로컬 뷰어에서 B2a(3초) 충족.
 - 텍스처는 **WebP 채택**(2026-06-12 결정): KTX2 대비 도구체인 단순(toktx 불필요)·three 기본 지원, 반가사유상 실측 1.3MB로 충분. GPU 메모리가 문제 되면 KTX2 후속 검토.
+- **데이터 품질 보정 내역(14점 실측으로 일반화, 2026-06-13)** — 전부 파이프라인이 자동 처리:
+  ① MTL 깨진 제작 PC 절대경로·CRLF·비ASCII 재질명(latin1 보존+`material0` 통일)·파일명 오타(접미사 매칭) 정정
+  ② 텍스처 사전 정규화: 손상 JPG 마커 재인코딩 + texsize 선리사이즈(obj2gltf 메모리 가드 회피)
+  ③ **스케일 정규화**: 원본 단위 혼재(mm/cm) → 경계구 반지름 1유닛 통일(뷰어·전시관 배치 단위 독립)
+  ④ 축 보정: 기본 Z-up→Y-up(-90°X), 예외 유물은 `content/pipeline-overrides.json`으로 영구화(`--no-zup` 3점, `--roty` 1점 — 14점 전점 포스터 시각 QA 완료)
+- 포스터: `scripts/poster.mjs` — `/embed/<id>`를 헤드리스 Chrome(SwiftShader)으로 렌더해 캡처. AC-F1-3 폴백·썸네일·OG 원천이자 **렌더링 E2E 검증** 수단.
 - 폴백 계획: Draco 디코더 문제 시 meshopt로 대체, WebP 문제 시 JPG 텍스처 유지(B1 내라면 허용).
 - **첫 실측(2026-06-12, 반가사유상)**: 원본 62.9MB → 발행 1.3MB, **절감 97.9%**, 267,560 tris — B1(≤5MB)·B4(≥90%) 충족.
 
