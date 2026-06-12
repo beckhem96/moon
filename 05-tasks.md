@@ -28,6 +28,7 @@
 | ☐ U-04 | **AI 도슨트 LLM 결정** + 키 발급 | **6/17** | 미결정 시 6/18에 Gemini 무료 티어로 자동 확정 (`04` §12) |
 | ☐ U-05 | **서비스명 확정** (`02` §1 후보 3안) | 6/24 | 접수 후 변경 불가 |
 | ☐ U-06 | (선택) Kakao 지도 키 발급 | — | 미발급 시 Leaflet+OSM 유지 (기본값) |
+| ☐ U-07 | **GitHub 저장소 생성·푸시 + Vercel 연결** | 6/15 | gh·vercel CLI 부재로 분리. `gh auth login` 후 `gh repo create` + vercel.com에서 저장소 Import — T-13(첫 배포) 선행 |
 
 ## §3. 태스크 보드
 
@@ -35,10 +36,10 @@
 
 | ID | 태스크 | 컨텍스트 | P | 의존 | 완료 기준 |
 |---|---|---|---|---|---|
-| ☐ T-02 | 스캐폴딩: `web/` Next.js+TS strict+Tailwind, git init+GitHub 연결, 라우트 골격, Vercel 프로젝트 생성 | shared | P1 | — | 빈 페이지가 배포 URL에서 열림 (헌법 §2 조기 확립) |
-| ☐ T-03 | zod 스키마 + `ArtifactRepository`(JSON) + 샘플 유물 1건 | Catalog | P1 | T-02 | 스키마 위반 JSON이 빌드를 실패시킴 (attribution 누락 케이스 테스트) |
-| ☐ T-04 | 파이프라인 스크립트: convert→optimize→measure→publish (`npm run pipeline -- <id>`) | AssetPipeline | P1 | U-03 | `04` §7 단계 표 그대로 동작, metrics.json 기록 |
-| ☐ T-05 | **M1 게이트**: 유물 1점 E2E + 최소 뷰어로 B2a 확인 | 전체 | P1 | T-03 T-04 | 게이트 통과 기록 (§5 체크인) |
+| ◐ T-02 | 스캐폴딩: `web/` Next.js+TS strict+Tailwind, git init+GitHub 연결, 라우트 골격, Vercel 프로젝트 생성 | shared | P1 | — | **6/12 선행 완료**: Next.js 16.2.9 스캐폴딩·git init·홈/상세 라우트. 잔여: GitHub·Vercel 연결(U-07, CLI 부재) |
+| ☑ T-03 | zod 스키마 + `ArtifactRepository`(JSON) + 샘플 유물 1건 | Catalog | P1 | T-02 | **완료 6/12** — attribution 누락 케이스로 검증 실패 게이트 시연(prebuild 연동) |
+| ☑ T-04 | 파이프라인 스크립트: convert→optimize→measure→publish (`npm run pipeline -- <id>`) | AssetPipeline | P1 | U-03 | **완료 6/12** — 반가사유상 62.9MB→1.3MB(−97.9%), metrics.json 기록 |
+| ◐ T-05 | **M1 게이트**: 유물 1점 E2E + 최소 뷰어로 B2a 확인 | 전체 | P1 | T-03 T-04 | **6/12 기술 게이트 통과**(빌드·SSG·GLB 서빙·B1/B4·Z-up 보정). 잔여: 브라우저 시각 확인 1회(localhost:3000) |
 
 ### M2 — 6/15(월)~18(목)
 
@@ -124,4 +125,12 @@
 - 발견: 원본 zip 2종 패키징 — 구형(OBJ 직접 포함) / 신형 2024-10+(OBJ 일습이 중첩 zip) → 파이프라인 reception에서 추출 처리(`04` §7 반영). 변환 입력은 전점 OBJ+MTL+디퓨즈+노멀맵으로 동일
 - 오늘 남은 것: U-01(양식 — 사용자 직접 진행)
 - 블로커: 없음
+- 컷 판단: 해당 없음
+
+### 6/12(금) 추가 — M1 선행 (사용자 지시: "내일꺼 지금하자")
+- T-02 선행 완료: Next.js 16.2.9 + TS strict + Tailwind 4 + R3F/drei/zod, 바운디드 컨텍스트 디렉토리(04 §9), git init + 첫 커밋. GitHub·Vercel 연결은 U-07로 분리(gh·vercel CLI 부재)
+- T-03 완료: zod 스키마(단일 진실원)·JsonArtifactRepository·반가사유상 콘텐츠. attribution 누락 → 빌드 실패 게이트 시연 ✓
+- T-04 완료: 파이프라인 5단계 동작. 실측 보정 3종 반영 — ① MTL 깨진 제작 PC 경로 정정 ② `norm` 노멀맵 수동 부착(obj2gltf 미지원) ③ Z-up→Y-up 회전(scene bbox로 검증)
+- **첫 발행 지표: 금동 반가사유상 62.9MB → 1.3MB (절감 97.9%, 267,560 tris) — B1·B4 충족.** KTX2 대신 WebP 채택(04 §7 갱신)
+- T-05 기술 게이트 통과: prod 빌드·SSG·GLB 서빙(200, 1.36MB) 확인. **잔여: 브라우저 시각 확인 1회**(Chrome 확장 미연결로 자동화 불가)
 - 컷 판단: 해당 없음

@@ -115,14 +115,16 @@ erDiagram
 | 단계 | 도구 | 입력 → 출력 | 비고 |
 |---|---|---|---|
 | 1 reception | 수동 + 스크립트 | 다운로드 zip → `assets/source/<id>/` (중첩 zip이면 OBJ 일습 추출) | 원본은 git 제외(.gitignore), 출처·KOGL은 `SOURCE.md` 동봉(14점 작성 완료) |
-| 2 convert | obj2gltf (우선) / Blender headless (폴백) | OBJ+MTL+텍스처 → `assets/work/<id>.glb` | 원본이 OBJ 확정이므로 경량 도구 우선. 스케일·축 정규화 포함 |
-| 3 optimize | gltf-transform | weld → (필요 시) simplify → **draco** → 텍스처 리사이즈(≤2048) + **KTX2(etc1s)** | B1 초과 시: simplify 강도↑ → 텍스처 1024 → 그래도 초과면 등록 보류 |
+| 2 convert | obj2gltf (우선) / Blender headless (폴백) | OBJ+MTL+텍스처 → `assets/work/<id>/converted.glb` | 실측 반영(2026-06-12): MTL의 깨진 제작 PC 경로 정정, `norm` 노멀맵 수동 부착, Z-up→Y-up 회전 보정(`--no-zup`로 예외 처리) |
+| 3 optimize | gltf-transform | dedup·prune·weld → **draco** → 텍스처 리사이즈(≤2048) + **WebP(EXT_texture_webp)** | B1 초과 시: `--texsize 1024` → 그래도 초과면 등록 보류 |
 | 4 measure | gltf-transform inspect + 스크립트 | 단계별 용량·폴리곤 → `content/metrics.json` 누적 | B1(≤5MB)·B4(≥90%) 검증, **상한 8MB 초과 시 실패 처리**(도메인 불변 규칙 3) |
 | 5 publish | 스크립트 | `public/models/<id>.glb` + 포스터 PNG(뷰어 스크린샷) | 포스터는 AC-F1-3 폴백 겸 OG 이미지 |
 
 - 실행: `npm run pipeline -- <id>` 한 줄로 2~5 일괄.
 - **M1 게이트(6/14)**: 유물 1점이 전 단계 통과 + 로컬 뷰어에서 B2a(3초) 충족.
-- 폴백 계획: Draco 디코더 문제 시 meshopt로 대체, KTX2 호환 문제 시 JPG 텍스처 유지(B1 내라면 허용).
+- 텍스처는 **WebP 채택**(2026-06-12 결정): KTX2 대비 도구체인 단순(toktx 불필요)·three 기본 지원, 반가사유상 실측 1.3MB로 충분. GPU 메모리가 문제 되면 KTX2 후속 검토.
+- 폴백 계획: Draco 디코더 문제 시 meshopt로 대체, WebP 문제 시 JPG 텍스처 유지(B1 내라면 허용).
+- **첫 실측(2026-06-12, 반가사유상)**: 원본 62.9MB → 발행 1.3MB, **절감 97.9%**, 267,560 tris — B1(≤5MB)·B4(≥90%) 충족.
 
 ## §8. AI 도슨트 설계 (F4 — P1)
 
