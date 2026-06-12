@@ -28,7 +28,7 @@
 | ☐ U-04 | **AI 도슨트 LLM 결정** + 키 발급 | **6/17** | 미결정 시 6/18에 Gemini 무료 티어로 자동 확정 (`04` §12) |
 | ☐ U-05 | **서비스명 확정** (`02` §1 후보 3안) | 6/24 | 접수 후 변경 불가 |
 | ☐ U-06 | (선택) Kakao 지도 키 발급 | — | 미발급 시 Leaflet+OSM 유지 (기본값) |
-| ☐ U-07 | **GitHub 저장소 생성·푸시 + Vercel 연결** | 6/15 | gh·vercel CLI 부재로 분리. `gh auth login` 후 `gh repo create` + vercel.com에서 저장소 Import — T-13(첫 배포) 선행 |
+| ◐ U-07 | **GitHub 저장소 생성·푸시 + Vercel 연결** | 6/15 | GitHub 완료 6/12 — github.com/beckhem96/moon (SSH push, 비밀키 미포함 확인). 잔여: vercel.com/new에서 Import + **Root Directory=`web` 지정** — T-13(첫 배포) 선행 |
 
 ## §3. 태스크 보드
 
