@@ -1,0 +1,23 @@
+{
+  "id": "pensive-bodhisattva-4358",
+  "title": "금동 반가사유상",
+  "titleHanja": "金銅半跏思惟像",
+  "era": "삼국시대",
+  "material": "금동",
+  "dimensions": "높이 81.5cm, 불신높이 50cm, 대좌너비 30cm",
+  "description": "왼쪽 무릎 위에 오른쪽 다리를 걸치고 오른쪽 손가락을 살짝 뺨에 댄 채 깊은 생각에 잠긴 보살상이다. 삼국시대 6세기 후반에 중공식 주조 기법으로 제작된 것으로 추정되며, 국보로 지정되어 있다. 국립중앙박물관 '사유의 방'에 전시되어 있다.",
+  "museum": "국립중앙박물관",
+  "collectionNo": "본관2789",
+  "attribution": {
+    "kogl": 1,
+    "provider": "국립중앙박물관",
+    "sourceUrl": "https://www.museum.go.kr/MUSEUM/contents/M0505000000.do?schM=view&searchId=search&relicId=4358"
+  },
+  "sources": ["국립중앙박물관 소장품 3D(2026-06-12 확인)"],
+  "suggestedQuestions": [
+    "반가사유상은 어떤 자세를 하고 있나요?",
+    "이 불상은 무슨 생각을 하고 있을까요?",
+    "어떻게 만들어졌나요?"
+  ],
+  "featured": true
+}
