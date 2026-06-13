@@ -43,6 +43,8 @@ function AutoRotate({
   enabled: boolean;
 }) {
   useFrame((_, delta) => {
+    // camera-controls는 명령형 mutation이 정상 사용법 (ref.current 속성 변경)
+    // eslint-disable-next-line react-hooks/immutability
     if (enabled && controls.current) controls.current.azimuthAngle += delta * 0.4;
   });
   return null;
