@@ -13,11 +13,14 @@
     "provider": "국립중앙박물관",
     "sourceUrl": "https://www.museum.go.kr/MUSEUM/contents/M0505000000.do?schM=view&searchId=search&relicId=4358"
   },
-  "sources": ["국립중앙박물관 소장품 3D(2026-06-12 확인)"],
+  "sources": [
+    "국립중앙박물관 소장품 3D(2026-06-12 확인)"
+  ],
   "suggestedQuestions": [
     "반가사유상은 어떤 자세를 하고 있나요?",
     "이 불상은 무슨 생각을 하고 있을까요?",
     "어떻게 만들어졌나요?"
   ],
-  "featured": true
+  "featured": true,
+  "siteId": "national-museum-of-korea"
 }

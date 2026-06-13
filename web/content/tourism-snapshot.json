@@ -1,0 +1,49 @@
+{
+  "national-museum-of-korea": {
+    "collectedAt": "2026-06-12T17:40Z",
+    "items": [
+      {
+        "contentId": "1604580",
+        "title": "국립중앙박물관 전통염료식물원",
+        "distanceM": 313,
+        "address": "서울특별시 용산구 서빙고로 137 (용산동6가)",
+        "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/52/3505552_image2_1.jpg"
+      },
+      {
+        "contentId": "126499",
+        "title": "용산가족공원",
+        "distanceM": 488,
+        "address": "서울특별시 용산구 서빙고로 185 (용산동6가)",
+        "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/49/3507949_image2_1.jpg"
+      },
+      {
+        "contentId": "3458416",
+        "title": "용산공원 부분개방부지",
+        "distanceM": 957,
+        "address": "서울특별시 용산구 서빙고로 238 (서빙고동)",
+        "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/53/3458353_image2_1.jpg"
+      },
+      {
+        "contentId": "2758125",
+        "title": "왜고개",
+        "distanceM": 1035,
+        "address": "서울특별시 용산구 한강대로40길 46 (용산동5가)",
+        "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/07/3542807_image2_1.jpg"
+      },
+      {
+        "contentId": "1603296",
+        "title": "서빙고동 부군당",
+        "distanceM": 1194,
+        "address": "서울특별시 용산구 서빙고로59길 3-6 (서빙고동)",
+        "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/78/3542778_image2_1.jpg"
+      },
+      {
+        "contentId": "704506",
+        "title": "서울 삼각지 대구탕 골목",
+        "distanceM": 1328,
+        "address": "서울특별시 용산구 한강대로62가길 4 (한강로1가)",
+        "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/28/3568228_image2_1.jpg"
+      }
+    ]
+  }
+}

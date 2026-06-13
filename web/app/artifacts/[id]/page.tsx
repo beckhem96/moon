@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { artifactRepository } from "@/src/catalog/repository";
 import ArtifactViewer from "@/src/experience/ArtifactViewer";
 import DocentChat from "@/src/docent/DocentChat";
+import TourismSection from "@/src/tourism/TourismSection";
+import { getSiteById } from "@/src/tourism/repository";
 
 export function generateStaticParams() {
   return artifactRepository.getAll().map((a) => ({ id: a.id }));
@@ -78,6 +80,15 @@ export default async function ArtifactPage({
       <div className="mt-8">
         <DocentChat artifactId={artifact.id} suggestedQuestions={artifact.suggestedQuestions} />
       </div>
+
+      {artifact.siteId && (() => {
+        const site = getSiteById(artifact.siteId);
+        return site ? (
+          <div className="mt-8">
+            <TourismSection site={site} />
+          </div>
+        ) : null;
+      })()}
 
       {/* 출처표시 — 헌법 §1-2: 유물 상세 노출 필수 */}
       <footer className="mt-8 rounded-lg border border-neutral-200 bg-neutral-50 p-4 text-sm text-neutral-600">

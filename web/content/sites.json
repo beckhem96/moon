@@ -1,0 +1,10 @@
+[
+  {
+    "id": "national-museum-of-korea",
+    "name": "국립중앙박물관",
+    "relation": "소장처",
+    "coords": { "lat": 37.5238, "lng": 126.9804 },
+    "address": "서울특별시 용산구 서빙고로 137",
+    "note": "이 서비스의 모든 3D 유물 실물이 소장·전시되어 있는 곳"
+  }
+]
