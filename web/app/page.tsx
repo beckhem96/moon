@@ -32,14 +32,12 @@ export default function Home() {
           >
             유물 카탈로그 보기
           </Link>
-          {featured[0] && (
-            <Link
-              href={`/artifacts/${featured[0].id}`}
-              className="rounded-xl border border-neutral-300 px-5 py-3 text-sm font-medium transition hover:border-neutral-500"
-            >
-              대표 유물 바로 체험
-            </Link>
-          )}
+          <Link
+            href="/exhibition"
+            className="rounded-xl border border-neutral-300 px-5 py-3 text-sm font-medium transition hover:border-neutral-500"
+          >
+            가상 전시관 둘러보기
+          </Link>
         </div>
         <p className="mt-5 text-xs text-neutral-400">
           유물 {artifacts.length}점 · 원본 대비 평균 {avgReduction}% 경량화로 모바일에서도 빠르게
