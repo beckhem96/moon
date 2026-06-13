@@ -144,7 +144,7 @@ interface DocentProvider {
 }
 ```
 
-- 구현체: `providers/mock.ts`(기본 — 사전 작성 해설 시퀀스, 키 없이 UI 개발), `providers/anthropic.ts` | `providers/gemini.ts` 중 **U-04 결정분 1개**(6/19 T-14에서 연결). 선택은 env `DOCENT_PROVIDER`.
+- 구현체: `providers/mock.ts`(기본 — 사전 작성 해설 시퀀스, 키 없이 UI 개발), **`providers/anthropic.ts` 구현 완료(2026-06-13)** — `@anthropic-ai/sdk` 스트리밍, `DOCENT_PROVIDER=anthropic`+`DOCENT_API_KEY`로 즉시 활성화. 모델은 `DOCENT_MODEL`(기본 `claude-haiku-4-5` — 공개 데모 비용·속도, 최고 품질은 `claude-opus-4-8`). Gemini 선택 시 동일 패턴으로 `providers/gemini.ts` 1파일 추가. **U-04(제공자·키)는 사용자 결정 대기** — 결정 즉시 키만 넣으면 됨.
 - 시스템 프롬프트 원칙: 주입된 유물 메타데이터 안에서만 답변, 불확실하면 "자료에 없는 내용"이라 답하기, 한국어 존댓말, 응답 ≤300자 권장(읽기 흐름·토큰 비용), 출처(소장처·KOGL) 인지.
 - 비용·남용 가드: 인메모리 IP 레이트리밋(분당 5 — 서버리스 인스턴스별 best-effort 한계는 인지하되 공모전 규모에 충분) + 클라이언트 세션 상한(유물당 10문답) + maxTokens 상한.
 - UI: 추천 질문 칩(유물 JSON의 `suggestedQuestions` 필드, AC-F4-2), 스트리밍 타자 표시, "AI 생성" 고지(AC-F4-3).
