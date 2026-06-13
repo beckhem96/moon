@@ -4,7 +4,7 @@
   "era": "초기철기",
   "material": "동합금",
   "dimensions": "길이 25.4cm, 너비 19.1cm, 지름 2.9cm, 길이 25cm, 너비 19.1cm",
-  "description": "go.kr 주소를 사용하는 누리집은 대한민국 정부기관이 관리하는 누리집입니다. 이 밖에 or.kr 또는 .kr등 다른 도메인 주소를 사용하고 있다면 아래 URL에서 도메인 주소를 확인해 보세요.",
+  "description": "초기철기시대의 청동 의기(儀器)이다. 칼자루(검파) 모양을 본떠 만들었으며 표면에 정교한 무늬가 있다. 실용 도구가 아니라 제사나 의례에 쓰인 상징물로 추정되며, 당시의 청동 주조 기술과 신앙을 보여준다.",
   "museum": "국립중앙박물관",
   "collectionNo": "신수3491",
   "attribution": {
@@ -13,7 +13,7 @@
     "sourceUrl": "https://www.museum.go.kr/MUSEUM/contents/M0505000000.do?schM=view&searchId=search&relicId=2056"
   },
   "sources": [
-    "국립중앙박물관 소장품 3D 상세(2026-06-12 수집)"
+    "국립중앙박물관 소장품 메타데이터 기반 정리(2026-06-13)"
   ],
   "suggestedQuestions": [
     "이 유물은 무엇에 쓰던 물건인가요?",

@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://moon.example.com"),
   title: {
     default: "문화유산 3D 체험 (가칭 moon)",
     template: "%s | moon",

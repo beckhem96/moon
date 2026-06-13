@@ -47,10 +47,12 @@ for (const [slug, rid, , kogl, tsvName] of rows) {
   const ov = OVERRIDES[slug] ?? {};
   const title = ov.title ?? (hasKorean(pageTitle) ? pageTitle : hasKorean(tsvName) ? tsvName : pageTitle ?? tsvName);
 
-  // 설명: 본문에서 충분히 긴 첫 문단 (라이선스·안내 문구 제외)
+  // 주의: 박물관 3D 상세 페이지에는 서술형 설명이 없다(메타데이터만 제공). 과거 본문 <p> 추정
+  // 방식은 정부 누리집 안내 배너를 오수집했다. 설명은 scripts/apply-descriptions.mjs로 별도 관리.
+  const BANNER = /go\.kr|누리집|쿠키|개인정보|브라우저|공공누리|저작물|Copyright|박물관 바로가기|뉴스레터/i;
   const desc = [...html.matchAll(/<p>([\s\S]{60,}?)<\/p>/g)]
     .map((m) => strip(m[1]))
-    .find((t) => t.length >= 60 && !/공공누리|저작물|쿠키|개인정보|Copyright/i.test(t));
+    .find((t) => t.length >= 60 && !BANNER.test(t));
 
   const artifact = {
     id: slug,

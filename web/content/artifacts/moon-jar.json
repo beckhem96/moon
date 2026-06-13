@@ -5,7 +5,7 @@
   "era": "조선",
   "material": "백자",
   "dimensions": "높이 46cm, 몸통지름 46cm, 입지름 21.0cm, 바닥지름 14.5cm",
-  "description": "go.kr 주소를 사용하는 누리집은 대한민국 정부기관이 관리하는 누리집입니다. 이 밖에 or.kr 또는 .kr등 다른 도메인 주소를 사용하고 있다면 아래 URL에서 도메인 주소를 확인해 보세요.",
+  "description": "조선시대에 만들어진 백자 항아리이다. 보름달을 닮은 둥근 몸체 때문에 '달항아리'라 불린다. 위아래로 빚은 두 부분을 이어 붙여 완성하기에 좌우가 살짝 비대칭을 이루며, 이 자연스러운 비례와 순백의 질감이 조선 백자의 미감을 대표한다. 높이는 약 46cm이다.",
   "museum": "국립중앙박물관",
   "collectionNo": "접수2084",
   "attribution": {
@@ -14,7 +14,7 @@
     "sourceUrl": "https://www.museum.go.kr/MUSEUM/contents/M0505000000.do?schM=view&searchId=search&relicId=35862840"
   },
   "sources": [
-    "국립중앙박물관 소장품 3D 상세(2026-06-12 수집)"
+    "국립중앙박물관 소장품 메타데이터 기반 정리(2026-06-13)"
   ],
   "suggestedQuestions": [
     "이 유물은 무엇에 쓰던 물건인가요?",

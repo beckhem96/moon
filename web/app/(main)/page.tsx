@@ -82,12 +82,6 @@ export default function Home() {
         </section>
       )}
 
-      <footer className="mt-16 border-t border-neutral-200 pt-6 text-xs leading-relaxed text-neutral-400">
-        <p>
-          3D 원천데이터·유물 정보: 국립중앙박물관 (공공누리 제1유형 — 출처표시). 유물별 상세 출처는
-          각 유물 페이지에 표기됩니다.
-        </p>
-      </footer>
     </main>
   );
 }

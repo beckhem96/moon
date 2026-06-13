@@ -4,7 +4,7 @@
   "era": "고려",
   "material": "청자",
   "dimensions": "높이 18.3cm, 최대지름 17.6cm",
-  "description": "go.kr 주소를 사용하는 누리집은 대한민국 정부기관이 관리하는 누리집입니다. 이 밖에 or.kr 또는 .kr등 다른 도메인 주소를 사용하고 있다면 아래 URL에서 도메인 주소를 확인해 보세요.",
+  "description": "고려시대의 청자 주전자이다. 여러 개의 석류를 모아 놓은 모양으로 빚어 형태 자체가 장식이 되며, 맑은 비취색 유약을 입혔다. 고려청자의 뛰어난 조형 감각과 상형(象形) 기법을 보여준다.",
   "museum": "국립중앙박물관",
   "collectionNo": "덕수2170",
   "attribution": {
@@ -13,7 +13,7 @@
     "sourceUrl": "https://www.museum.go.kr/MUSEUM/contents/M0505000000.do?schM=view&searchId=search&relicId=1124"
   },
   "sources": [
-    "국립중앙박물관 소장품 3D 상세(2026-06-12 수집)"
+    "국립중앙박물관 소장품 메타데이터 기반 정리(2026-06-13)"
   ],
   "suggestedQuestions": [
     "이 유물은 무엇에 쓰던 물건인가요?",

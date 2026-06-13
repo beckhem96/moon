@@ -4,7 +4,7 @@
   "titleHanja": "注口杯",
   "era": "신라",
   "material": "흙",
-  "description": "go.kr 주소를 사용하는 누리집은 대한민국 정부기관이 관리하는 누리집입니다. 이 밖에 or.kr 또는 .kr등 다른 도메인 주소를 사용하고 있다면 아래 URL에서 도메인 주소를 확인해 보세요.",
+  "description": "삼국시대 신라의 토기로, 액체를 따르는 부리(주구)가 달린 잔 형태이다. 무덤에 함께 묻은 껴묻거리(부장품)로 출토되었다. 굽다리와 부리의 비례에서 신라 토기 특유의 조형 감각을 엿볼 수 있다.",
   "museum": "국립중앙박물관",
   "collectionNo": "K번38",
   "attribution": {
@@ -13,7 +13,7 @@
     "sourceUrl": "https://www.museum.go.kr/MUSEUM/contents/M0505000000.do?schM=view&searchId=search&relicId=36560664"
   },
   "sources": [
-    "국립중앙박물관 소장품 3D 상세(2026-06-12 수집)"
+    "국립중앙박물관 소장품 메타데이터 기반 정리(2026-06-13)"
   ],
   "suggestedQuestions": [
     "이 유물은 무엇에 쓰던 물건인가요?",

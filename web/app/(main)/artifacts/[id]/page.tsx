@@ -19,9 +19,17 @@ export async function generateMetadata({
   const { id } = await params;
   const artifact = artifactRepository.getById(id);
   if (!artifact) return {};
+  const description = artifact.description.slice(0, 120);
   return {
     title: `${artifact.title} — 3D 보기`,
-    description: artifact.description.slice(0, 120),
+    description,
+    // AC-F7-1: 카톡·슬랙 등 링크 공유 시 미리보기 (포스터 이미지)
+    openGraph: {
+      title: `${artifact.title} | moon`,
+      description,
+      images: artifact.asset.posterPath ? [{ url: artifact.asset.posterPath }] : [],
+      type: "website",
+    },
   };
 }
 
@@ -43,9 +51,29 @@ export default async function ArtifactPage({
     ["소장품번호", artifact.collectionNo],
   ];
 
+  // 비기능 §4 SEO: schema.org VisualArtwork 구조화 데이터
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "VisualArtwork",
+    name: artifact.title,
+    description: artifact.description,
+    artMedium: artifact.material,
+    dateCreated: artifact.era,
+    ...(artifact.dimensions ? { size: artifact.dimensions } : {}),
+    locationCreated: artifact.museum,
+    image: artifact.asset.posterPath,
+    isAccessibleForFree: true,
+    license: "https://www.kogl.or.kr/info/licenseType1.do",
+    creditText: `${artifact.attribution.provider} (공공누리 제${artifact.attribution.kogl}유형)`,
+  };
+
   return (
     <main className="mx-auto max-w-4xl px-4 py-8">
-      <Link href="/" className="text-sm text-neutral-500 hover:underline">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Link href="/artifacts" className="text-sm text-neutral-500 hover:underline">
         ← 목록으로
       </Link>
       <h1 className="mt-2 text-2xl font-bold">
