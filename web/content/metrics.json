@@ -74,11 +74,11 @@
   "gold-buckle-seokamri": {
     "sourceFormat": "OBJ",
     "sourceSizeMB": 119.43,
-    "publishedSizeMB": 2.74,
-    "reductionPct": 97.7,
+    "publishedSizeMB": 1.6,
+    "reductionPct": 98.7,
     "triangles": 155652,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-12"
+    "processedAt": "2026-06-13"
   },
   "iron-buddha": {
     "sourceFormat": "OBJ",
