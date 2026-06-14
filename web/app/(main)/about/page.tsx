@@ -56,17 +56,17 @@ export default function AboutPage() {
                   </a>
                 </td>
                 <td className="py-2 pr-4">국립중앙박물관</td>
-                <td className="py-2 pr-4">다운로드 후 웹용 변환·압축(GLB)하여 3D 뷰어 제공</td>
+                <td className="py-2 pr-4">다운로드 후 웹용 변환·압축(GLB)하여 3D 뷰어·가상 전시관 제공</td>
                 <td className="py-2">공공누리 제1유형(출처표시)</td>
               </tr>
               <tr className="border-b border-neutral-100">
                 <td className="py-2 pr-4">
-                  <a href="https://www.culture.go.kr/data/openapi/openapiView.do?id=82" target="_blank" rel="noreferrer" className="underline">
-                    e뮤지엄 유물정보 API
+                  <a href="https://www.museum.go.kr/MUSEUM/contents/M0505000000.do" target="_blank" rel="noreferrer" className="underline">
+                    소장품 정보(메타데이터)
                   </a>
                 </td>
-                <td className="py-2 pr-4">국립중앙박물관 (문화 공공데이터광장)</td>
-                <td className="py-2 pr-4">유물 메타데이터 수집·정제 (연동 준비 중)</td>
+                <td className="py-2 pr-4">국립중앙박물관</td>
+                <td className="py-2 pr-4">명칭·시대·재질·크기 등 수집·정제하여 유물 상세 제공</td>
                 <td className="py-2">공공누리 제1유형</td>
               </tr>
               <tr className="border-b border-neutral-100">
@@ -76,14 +76,16 @@ export default function AboutPage() {
                   </a>
                 </td>
                 <td className="py-2 pr-4">한국관광공사 (공공데이터포털)</td>
-                <td className="py-2 pr-4">유물 연고지 주변 관광정보 표시 (연동 준비 중)</td>
+                <td className="py-2 pr-4">유물 연고지 주변 관광지를 실시간 조회·표시</td>
                 <td className="py-2">공공누리 제1유형</td>
               </tr>
             </tbody>
           </table>
         </div>
         <p className="mt-2 text-xs text-neutral-500">
-          유물별 상세 출처(원천 페이지 링크)는 각 유물 페이지 하단에 표기되어 있습니다.
+          유물별 상세 출처(원천 페이지 링크)는 각 유물 페이지 하단에 표기되어 있습니다. 이 밖에
+          국립중앙박물관 e뮤지엄 유물정보 OpenAPI(문화 공공데이터광장)는 활용신청·검증을 마쳐, 전국
+          박물관 단위로 유물을 확장할 때 메타데이터 소스로 활용할 예정입니다.
         </p>
       </section>
 

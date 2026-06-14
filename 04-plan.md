@@ -66,7 +66,7 @@ graph TB
 - 유물 6~8점·읽기 전용·빌드타임 확정 → **`content/artifacts/*.json` 파일이 데이터베이스다.** git이 이력 관리, zod가 무결성 검증(빌드 실패로 강제), Vercel 빌드가 "마이그레이션".
 - 접근은 **저장소 패턴**으로 추상화: `ArtifactRepository`(`getAll/getById/search`) 인터페이스 + `JsonArtifactRepository` 구현. UI·도슨트·관광 코드는 인터페이스에만 의존.
 - **확장 경로(발전가능성 20% 대응, 기획서 인용용)**: 유물 100점+ 시 `JsonArtifactRepository` → `PostgresArtifactRepository`(Supabase 등) 교체만으로 전환. 컨텍스트 경계(`03` §2)가 서비스 분리선.
-- e뮤지엄 메타: **빌드 전 수집 스크립트**(`scripts/collect-emuseum.mjs`)가 호출·정제 후 JSON에 `sources` 필드와 함께 병합 — 런타임 무의존(`03` §5-2), 데이터활용 증빙은 수집 스크립트+출처 필드로. 실호출 검증(2026-06-12): keyword 필터 미지원(총 334,187건) → 페이지네이션 1회 수집해 로컬 캐시 후 유물 명칭 매칭.
+- 유물 메타: **빌드 전 수집 스크립트**(`scripts/collect-museum.mjs`)가 박물관 소장품 상세에서 명칭·시대·재질·분류·크기를 수집·정제 후 `content/artifacts/*.json`에 `sources` 필드와 함께 기록 — 런타임 무의존(`03` §5-2). e뮤지엄 OpenAPI는 실호출 검증했으나 keyword 필터 미지원(총 334,187건)·이미지 미제공으로 큐레이션 명작에 미통합, 전국 확장 대비 검증 소스로 문서화(2026-06-14 결론).
 
 ## §4. 데이터 모델
 
@@ -172,7 +172,7 @@ moon/
     │   └── shared/          # ArtifactId 등 공유 커널 (최소)
     ├── content/             # artifacts/*.json, sites.json, exhibitions.json, metrics.json
     ├── public/models/       # 발행 GLB + 포스터
-    └── scripts/             # pipeline/, collect-emuseum.mjs
+    └── scripts/             # pipeline/, collect-museum.mjs, measure-load.mjs, a11y-audit.mjs
 ```
 
 ## §10. 배포 · 환경변수
