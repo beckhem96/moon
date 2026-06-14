@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main className="mx-auto max-w-5xl px-4 py-14">
       <section className="text-center">
-        <p className="text-sm font-medium tracking-wide text-sky-600">
+        <p className="text-sm font-medium tracking-wide text-sky-700">
           공공 3D 문화유산 데이터 × AI 도슨트
         </p>
         <h1 className="mx-auto mt-3 max-w-2xl text-3xl font-bold leading-snug sm:text-4xl">
@@ -39,7 +39,7 @@ export default function Home() {
             가상 전시관 둘러보기
           </Link>
         </div>
-        <p className="mt-5 text-xs text-neutral-400">
+        <p className="mt-5 text-xs text-neutral-500">
           유물 {artifacts.length}점 · 원본 대비 평균 {avgReduction}% 경량화로 모바일에서도 빠르게
         </p>
       </section>
@@ -71,7 +71,7 @@ export default function Home() {
                   </div>
                   <div className="p-4">
                     <p className="font-medium">{a.title}</p>
-                    <p className="mt-0.5 text-xs text-neutral-400">
+                    <p className="mt-0.5 text-xs text-neutral-500">
                       {a.era} · {a.material} · {a.museum}
                     </p>
                   </div>

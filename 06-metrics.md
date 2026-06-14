@@ -62,12 +62,22 @@
 
 ---
 
+## 3-bis. 접근성 (WCAG 2.1 AA) — 사회적기여·ESG 증빙
+
+> 측정: axe-core 자동 점검(`scripts/a11y-audit.mjs`), 태그 wcag2a/2aa/21a/21aa. 홈·카탈로그·상세·소개·임베드 5개 라우트.
+
+- **결과: 위반 0종** (2026-06-13). 색상 대비(WCAG 1.4.3)·대체 텍스트·폼 레이블·랜드마크 등 자동 검출 항목 통과.
+- 주요 개선: OS 다크모드 강제 적용 시 대비가 깨지던 문제를 라이트 테마 고정으로 해소, 저대비 텍스트(`neutral-400`·`sky-600`)를 AA 충족 색으로 상향.
+- 자동 점검 외 수동 보장: 뷰어 키보드 조작(화살표 회전·+/− 줌·R 리셋), 이미지 대체 텍스트, 포커스 표시, `aria-label`/`aria-live`.
+- 의의: "거동 불편·고령·해외 이용자의 문화 향유" 주장을 **접근성 표준 통과로 뒷받침**한다.
+
 ## 4. 측정 재현 방법
 
 ```bash
 cd web
 npm run build && npm run start        # 로컬 프로덕션 서버(:3000)
 node scripts/measure-load.mjs         # B2 로딩 시간(광대역·Fast 4G, 3회 중앙값)
+node scripts/a11y-audit.mjs           # WCAG 2.1 AA 자동 점검(axe-core)
 node -e "console.log(require('./content/metrics.json'))"  # B1·B4 원천
 ```
 

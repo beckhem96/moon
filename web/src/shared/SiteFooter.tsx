@@ -13,7 +13,7 @@ export default function SiteFooter() {
           </Link>
           에서 확인할 수 있습니다.
         </p>
-        <p className="mt-1 text-neutral-400">
+        <p className="mt-1 text-neutral-500">
           2026 문화체육관광 AI·데이터 활용 공모전 출품작 · 공공데이터 기반 비영리 문화 향유 서비스
         </p>
       </div>

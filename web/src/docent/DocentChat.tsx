@@ -73,14 +73,14 @@ export default function DocentChat({
     <section aria-label="AI 도슨트" className="rounded-xl border border-neutral-200">
       <header className="flex items-baseline justify-between border-b border-neutral-100 px-4 py-3">
         <h2 className="font-semibold">AI 도슨트에게 물어보기</h2>
-        <span className="text-[11px] text-neutral-400">
+        <span className="text-[11px] text-neutral-500">
           AI 생성 답변 — 사실과 다를 수 있습니다
         </span>
       </header>
 
       <div ref={logRef} aria-live="polite" className="max-h-80 space-y-3 overflow-y-auto px-4 py-3">
         {messages.length === 0 && (
-          <p className="text-sm text-neutral-400">
+          <p className="text-sm text-neutral-500">
             아래 추천 질문을 누르거나 직접 입력해 보세요.
           </p>
         )}

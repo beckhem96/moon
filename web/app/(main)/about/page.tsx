@@ -82,7 +82,7 @@ export default function AboutPage() {
             </tbody>
           </table>
         </div>
-        <p className="mt-2 text-xs text-neutral-400">
+        <p className="mt-2 text-xs text-neutral-500">
           유물별 상세 출처(원천 페이지 링크)는 각 유물 페이지 하단에 표기되어 있습니다.
         </p>
       </section>
@@ -105,7 +105,7 @@ export default function AboutPage() {
             <p className="mt-1 text-neutral-500">유물당 용량 절감률</p>
           </li>
         </ul>
-        <p className="mt-2 text-xs text-neutral-400">
+        <p className="mt-2 text-xs text-neutral-500">
           Draco 기하 압축과 WebP 텍스처 변환을 적용해 모바일에서도 수 초 안에 감상할 수 있습니다.
         </p>
       </section>

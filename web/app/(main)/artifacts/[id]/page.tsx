@@ -79,7 +79,7 @@ export default async function ArtifactPage({
       <h1 className="mt-2 text-2xl font-bold">
         {artifact.title}
         {artifact.titleHanja && (
-          <span className="ml-2 text-base font-normal text-neutral-400">{artifact.titleHanja}</span>
+          <span className="ml-2 text-base font-normal text-neutral-500">{artifact.titleHanja}</span>
         )}
       </h1>
 
@@ -89,7 +89,7 @@ export default async function ArtifactPage({
           title={artifact.title}
           posterPath={artifact.asset.posterPath}
         />
-        <p className="mt-1 text-right text-xs text-neutral-400">
+        <p className="mt-1 text-right text-xs text-neutral-500">
           드래그로 회전 · 휠/핀치로 확대 — 3D {metrics.publishedSizeMB}MB (원본 대비 {metrics.reductionPct}% 경량화)
         </p>
       </div>
@@ -133,7 +133,7 @@ export default async function ArtifactPage({
           이며, 공공누리 제{artifact.attribution.kogl}유형(출처표시)에 따라 이용했습니다.
         </p>
         {artifact.sources.length > 0 && (
-          <p className="mt-1 text-xs text-neutral-400">메타데이터 출처: {artifact.sources.join(" · ")}</p>
+          <p className="mt-1 text-xs text-neutral-500">메타데이터 출처: {artifact.sources.join(" · ")}</p>
         )}
       </footer>
     </main>

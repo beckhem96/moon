@@ -9,7 +9,7 @@ import type { HeritageSite, TourismInfo } from "./acl";
 const SiteMap = dynamic(() => import("./SiteMap"), {
   ssr: false,
   loading: () => (
-    <div className="flex h-64 items-center justify-center rounded-xl bg-neutral-100 text-sm text-neutral-400">
+    <div className="flex h-64 items-center justify-center rounded-xl bg-neutral-100 text-sm text-neutral-500">
       지도를 불러오는 중…
     </div>
   ),
@@ -39,7 +39,7 @@ export default function TourismSection({ site }: { site: HeritageSite }) {
       <h2 className="text-lg font-semibold">직접 가서 만나기</h2>
       <p className="mt-1 text-sm text-neutral-500">
         {site.relation}: <span className="font-medium text-neutral-700">{site.name}</span>
-        {site.address && <span className="ml-1 text-neutral-400">({site.address})</span>}
+        {site.address && <span className="ml-1 text-neutral-500">({site.address})</span>}
       </p>
 
       <div className="mt-3">
@@ -48,9 +48,9 @@ export default function TourismSection({ site }: { site: HeritageSite }) {
 
       <h3 className="mt-5 text-sm font-semibold text-neutral-600">주변 가볼 만한 곳</h3>
       {failed ? (
-        <p className="mt-2 text-sm text-neutral-400">관광정보를 일시적으로 불러올 수 없습니다.</p>
+        <p className="mt-2 text-sm text-neutral-500">관광정보를 일시적으로 불러올 수 없습니다.</p>
       ) : !data ? (
-        <p className="mt-2 text-sm text-neutral-400">주변 관광정보를 불러오는 중…</p>
+        <p className="mt-2 text-sm text-neutral-500">주변 관광정보를 불러오는 중…</p>
       ) : (
         <>
           <ul className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-3">
@@ -64,14 +64,14 @@ export default function TourismSection({ site }: { site: HeritageSite }) {
                 )}
                 <div className="p-2.5">
                   <p className="truncate text-sm font-medium">{t.title}</p>
-                  <p className="mt-0.5 text-xs text-neutral-400">
+                  <p className="mt-0.5 text-xs text-neutral-500">
                     {fmtDist(t.distanceM)} · {t.address?.split("(")[0] ?? ""}
                   </p>
                 </div>
               </li>
             ))}
           </ul>
-          <p className="mt-2 text-[11px] text-neutral-400">
+          <p className="mt-2 text-[11px] text-neutral-500">
             관광정보 출처: 한국관광공사 TourAPI
             {data.source === "snapshot" && ` (네트워크 문제로 ${data.collectedAt} 수집본 표시 중)`}
           </p>

@@ -73,7 +73,7 @@ export default function CatalogBrowser({ items }: { items: CatalogItem[] }) {
           <p>조건에 맞는 유물이 없습니다.</p>
           <button
             type="button"
-            className="mt-3 text-sm font-medium text-sky-600 hover:underline"
+            className="mt-3 text-sm font-medium text-sky-700 hover:underline"
             onClick={() => {
               setQ("");
               setEra("");
@@ -108,7 +108,7 @@ export default function CatalogBrowser({ items }: { items: CatalogItem[] }) {
                 </div>
                 <div className="p-3">
                   <p className="truncate font-medium">{a.title}</p>
-                  <p className="mt-0.5 text-xs text-neutral-400">
+                  <p className="mt-0.5 text-xs text-neutral-500">
                     {a.era} · {a.material}
                   </p>
                 </div>
