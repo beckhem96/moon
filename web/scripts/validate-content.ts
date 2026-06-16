@@ -3,8 +3,11 @@ import { artifactRepository } from "../src/catalog/repository";
 
 try {
   const items = artifactRepository.getAll();
-  console.log(`✓ 콘텐츠 검증 통과 — 발행 유물 ${items.length}점`);
+  const models = items.filter((a) => a.asset.kind === "model");
+  const images = items.length - models.length;
+  console.log(`✓ 콘텐츠 검증 통과 — 발행 유물 ${items.length}점 (3D ${models.length} · 이미지 ${images})`);
   for (const a of items) {
+    if (a.asset.kind !== "model") continue;
     const m = a.asset.metrics;
     const flag = m.publishedSizeMB > 5 ? " ⚠ B1 목표(5MB) 초과" : "";
     console.log(

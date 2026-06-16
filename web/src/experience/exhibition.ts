@@ -3,6 +3,9 @@ import path from "node:path";
 import { z } from "zod";
 import { artifactRepository } from "@/src/catalog/repository";
 import { categoryRank, eraRank } from "@/src/catalog/taxonomy";
+import type { ArtifactWithMedia, ModelMedia } from "@/src/catalog/schema";
+
+type ModelArtifact = ArtifactWithMedia & { asset: ModelMedia };
 
 /**
  * 03-domain §4 Exhibition 애그리거트 — 등록된 유물만 배치(불변 규칙 4).
@@ -73,7 +76,10 @@ const EXHIBIT_PER_CATEGORY = 4;
 const isCurated = (id: string) => !id.startsWith("nmk-");
 
 function groupByCategory() {
-  const all = artifactRepository.getAll();
+  // 전시관(3D 보행)은 모델 유물만 — 이미지 전용 유물은 카탈로그·타임라인에서 노출
+  const all = artifactRepository
+    .getAll()
+    .filter((a): a is ModelArtifact => a.asset.kind === "model");
   const present = [...new Set(all.map((a) => a.category))].sort(
     (a, b) => categoryRank(a) - categoryRank(b),
   );

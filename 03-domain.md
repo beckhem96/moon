@@ -17,7 +17,9 @@
 | 공공누리 | `KOGL` | 공공저작물 자유이용허락 표시제도 (1~4유형, 본 서비스는 1유형 위주) | Catalog |
 | 소장처 | `Museum` | 유물을 소장한 기관 (예: 국립중앙박물관) | Catalog |
 | 시대 | `Era` | 유물 제작 시기 분류 (신석기·청동기·초기철기·낙랑·삼국시대·신라·통일신라·고려·조선). 연대순 정렬 기준은 `taxonomy.ERA_ORDER` | Catalog |
-| 분류 | `Category` | 유물 특징에 따른 갈래 (토기·도기 / 청동기 / 금속공예·장신구 / 불교조각 / 도자기). 카탈로그 필터·전시관 구역의 기준. `taxonomy.CATEGORY_ORDER` | Catalog |
+| 분류 | `Category` | 유물 특징에 따른 갈래 (석기 / 토기·도기 / 청동기 / 금속공예·장신구 / 불교조각 / 도자기). 카탈로그 필터·전시관 구역의 기준. `taxonomy.CATEGORY_ORDER` | Catalog |
+| 표현 매체 | `ArtifactMedia` | 유물의 노출 형태 — 3D 모델(`ModelMedia`: GLB+포스터+지표) 또는 이미지 자료(`ImageMedia`: 대표 이미지). repository가 에셋 유무로 해소 | Catalog |
+| 시대 타임라인 | `Timeline` | 시대(`Era`)를 연대순으로 배열하고 시대 배경(편집 요약)과 유물을 함께 보여주는 탐색 화면 | Experience |
 | 재질 | `Material` | 유물 재질 분류 (금속·토제·도자기·석·목·지류 등) | Catalog |
 | 연고지 | `HeritageSite` | 유물과 지리적 연고가 있는 장소 (출토지·원소재지·소장처 위치) + 좌표 | Tourism |
 | 관광정보 | `TourismInfo` | 연고지 주변 관광지·시설 정보 (TourAPI 유래) | Tourism |

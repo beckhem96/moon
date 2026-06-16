@@ -10,12 +10,12 @@ export const metadata: Metadata = {
 /** 헌법 §1-2: 전체 데이터 출처 일람 페이지 */
 export default function AboutPage() {
   const artifacts = artifactRepository.getAll();
-  const totalSource = artifacts.reduce((s, a) => s + a.asset.metrics.sourceSizeMB, 0);
-  const totalPublished = artifacts.reduce((s, a) => s + a.asset.metrics.publishedSizeMB, 0);
+  const models = artifacts.flatMap((a) => (a.asset.kind === "model" ? [a.asset.metrics] : []));
+  const imageCount = artifacts.length - models.length;
+  const totalSource = models.reduce((s, m) => s + m.sourceSizeMB, 0);
+  const totalPublished = models.reduce((s, m) => s + m.publishedSizeMB, 0);
   const avgReduction =
-    Math.round(
-      (artifacts.reduce((s, a) => s + a.asset.metrics.reductionPct, 0) / artifacts.length) * 10,
-    ) / 10;
+    Math.round((models.reduce((s, m) => s + m.reductionPct, 0) / models.length) * 10) / 10;
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-10">
@@ -94,7 +94,7 @@ export default function AboutPage() {
         <ul className="mt-3 grid grid-cols-1 gap-3 text-sm sm:grid-cols-3">
           <li className="rounded-xl border border-neutral-200 p-4">
             <p className="text-2xl font-bold tabular-nums">{artifacts.length}점</p>
-            <p className="mt-1 text-neutral-500">공개 중인 3D 유물</p>
+            <p className="mt-1 text-neutral-500">공개 유물 (3D {models.length} · 이미지 {imageCount})</p>
           </li>
           <li className="rounded-xl border border-neutral-200 p-4">
             <p className="text-2xl font-bold tabular-nums">

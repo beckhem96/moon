@@ -6,7 +6,11 @@ import ArtifactViewer from "@/src/experience/ArtifactViewer";
 /** 02-spec F7(AC-F7-2) 뷰어 단독 임베드 — 포스터 촬영(scripts/poster.mjs)에도 사용 */
 
 export function generateStaticParams() {
-  return artifactRepository.getAll().map((a) => ({ id: a.id }));
+  // 임베드(뷰어 단독)는 3D 모델 유물만 — 이미지 유물은 임베드 대상 아님
+  return artifactRepository
+    .getAll()
+    .filter((a) => a.asset.kind === "model")
+    .map((a) => ({ id: a.id }));
 }
 
 export const metadata: Metadata = { robots: { index: false } };
@@ -18,7 +22,7 @@ export default async function EmbedPage({
 }) {
   const { id } = await params;
   const artifact = artifactRepository.getById(id);
-  if (!artifact) notFound();
+  if (!artifact || artifact.asset.kind !== "model") notFound();
 
   return (
     <main className="relative h-dvh w-dvw bg-neutral-900">

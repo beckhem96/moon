@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { artifactRepository } from "@/src/catalog/repository";
+import { posterOf } from "@/src/catalog/schema";
 import CatalogBrowser from "@/src/catalog/CatalogBrowser";
 
 export const metadata: Metadata = {
@@ -17,7 +18,8 @@ export default function ArtifactsPage() {
     category: a.category,
     material: a.material,
     museum: a.museum,
-    posterPath: a.asset.posterPath,
+    mediaKind: a.asset.kind,
+    posterPath: posterOf(a),
   }));
 
   return (

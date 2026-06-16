@@ -1,0 +1,26 @@
+{
+  "id": "nmk-img-51365",
+  "title": "찍개",
+  "era": "구석기",
+  "category": "석기",
+  "material": "기타",
+  "media": "image",
+  "dimensions": "현재길이 9.0cm, 현재길이 8.5cm, 현재길이 5.8cm, 현재길이 7.9cm",
+  "description": "찍개. 국립중앙박물관 소장품으로, 대표 이미지로 만나는 구석기 유물이다.",
+  "museum": "국립중앙박물관",
+  "collectionNo": "신수25281",
+  "attribution": {
+    "kogl": 1,
+    "provider": "국립중앙박물관",
+    "sourceUrl": "https://www.museum.go.kr/MUSEUM/contents/M0502000000.do?schM=view&searchId=search&relicId=51365"
+  },
+  "sources": [
+    "국립중앙박물관 소장품 검색(이미지·메타, 2026-06-16 수집)"
+  ],
+  "suggestedQuestions": [
+    "이 유물은 무엇에 쓰던 물건인가요?",
+    "어느 시대에 만들어졌고, 그 시대는 어떤 모습이었나요?",
+    "이 유물에서 눈여겨볼 부분은 어디인가요?"
+  ],
+  "featured": false
+}

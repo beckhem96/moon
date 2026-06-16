@@ -15,6 +15,7 @@ export interface CatalogItem {
   category: string;
   material: string;
   museum: string;
+  mediaKind: "model" | "image";
   posterPath?: string;
 }
 
@@ -28,6 +29,7 @@ export default function CatalogBrowser({ items }: { items: CatalogItem[] }) {
   const [era, setEra] = useState("");
   const [category, setCategory] = useState("");
   const [material, setMaterial] = useState("");
+  const [mtype, setMtype] = useState("");
   const [groupBy, setGroupBy] = useState<GroupBy>("era");
 
   // 필터 옵션은 분류 체계 순서로 정렬해 노출 (시대=연대순, 분류=채택순)
@@ -45,9 +47,10 @@ export default function CatalogBrowser({ items }: { items: CatalogItem[] }) {
           (!q || i.title.includes(q.trim())) &&
           (!era || i.era === era) &&
           (!category || i.category === category) &&
-          (!material || i.material === material),
+          (!material || i.material === material) &&
+          (!mtype || i.mediaKind === mtype),
       ),
-    [items, q, era, category, material],
+    [items, q, era, category, material, mtype],
   );
 
   // 선택한 차원(시대순/분류별)으로 섹션 그룹화 — "시대별로, 유물 특징 별로 구분"
@@ -79,6 +82,7 @@ export default function CatalogBrowser({ items }: { items: CatalogItem[] }) {
     setEra("");
     setCategory("");
     setMaterial("");
+    setMtype("");
   };
 
   return (
@@ -119,6 +123,11 @@ export default function CatalogBrowser({ items }: { items: CatalogItem[] }) {
           {materials.map((v) => (
             <option key={v}>{v}</option>
           ))}
+        </select>
+        <select value={mtype} onChange={(e) => setMtype(e.target.value)} aria-label="유형 필터" className={SELECT}>
+          <option value="">모든 유형</option>
+          <option value="model">3D 모델</option>
+          <option value="image">이미지</option>
         </select>
       </div>
 
@@ -181,10 +190,19 @@ export default function CatalogBrowser({ items }: { items: CatalogItem[] }) {
                       className="group block overflow-hidden rounded-xl border border-neutral-200 transition hover:border-neutral-400 hover:shadow-md"
                     >
                       <div className="relative aspect-square bg-neutral-900">
+                        <span
+                          className={`absolute left-1.5 top-1.5 z-10 rounded px-1.5 py-0.5 text-[10px] font-semibold ${
+                            a.mediaKind === "model"
+                              ? "bg-sky-700 text-white"
+                              : "bg-white/90 text-neutral-700"
+                          }`}
+                        >
+                          {a.mediaKind === "model" ? "3D" : "이미지"}
+                        </span>
                         {a.posterPath ? (
                           <Image
                             src={a.posterPath}
-                            alt={`${a.title} 3D 렌더 이미지`}
+                            alt={`${a.title} ${a.mediaKind === "model" ? "3D 렌더" : "대표"} 이미지`}
                             fill
                             sizes="(max-width: 640px) 50vw, 25vw"
                             className="object-cover transition group-hover:scale-105"

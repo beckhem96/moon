@@ -1,13 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
 import { artifactRepository } from "@/src/catalog/repository";
+import { posterOf } from "@/src/catalog/schema";
 
 export default function Home() {
   const artifacts = artifactRepository.getAll();
   const featured = artifacts.filter((a) => a.featured).slice(0, 3);
+  const models = artifacts.filter((a) => a.asset.kind === "model");
   const avgReduction =
     Math.round(
-      (artifacts.reduce((s, a) => s + a.asset.metrics.reductionPct, 0) / artifacts.length) * 10,
+      (models.reduce((s, a) => s + (a.asset.kind === "model" ? a.asset.metrics.reductionPct : 0), 0) /
+        models.length) *
+        10,
     ) / 10;
 
   return (
@@ -33,6 +37,12 @@ export default function Home() {
             유물 카탈로그 보기
           </Link>
           <Link
+            href="/timeline"
+            className="rounded-xl border border-neutral-300 px-5 py-3 text-sm font-medium transition hover:border-neutral-500"
+          >
+            시대 타임라인
+          </Link>
+          <Link
             href="/exhibition"
             className="rounded-xl border border-neutral-300 px-5 py-3 text-sm font-medium transition hover:border-neutral-500"
           >
@@ -40,7 +50,8 @@ export default function Home() {
           </Link>
         </div>
         <p className="mt-5 text-xs text-neutral-500">
-          유물 {artifacts.length}점 · 원본 대비 평균 {avgReduction}% 경량화로 모바일에서도 빠르게
+          유물 {artifacts.length}점(3D {models.length} · 이미지 {artifacts.length - models.length})
+          · 3D는 원본 대비 평균 {avgReduction}% 경량화로 모바일에서도 빠르게
         </p>
       </section>
 
@@ -55,9 +66,9 @@ export default function Home() {
                   className="group block overflow-hidden rounded-2xl border border-neutral-200 transition hover:border-neutral-400 hover:shadow-md"
                 >
                   <div className="relative aspect-square bg-neutral-900">
-                    {a.asset.posterPath ? (
+                    {posterOf(a) ? (
                       <Image
-                        src={a.asset.posterPath}
+                        src={posterOf(a)!}
                         alt={`${a.title} 3D 렌더 이미지`}
                         fill
                         sizes="(max-width: 640px) 100vw, 33vw"

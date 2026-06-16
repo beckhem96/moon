@@ -31,6 +31,8 @@ export const ArtifactSchema = z.object({
   era: z.string().min(1),
   /** 유물 특징(분류) — src/catalog/taxonomy.ts CATEGORY_ORDER 참조 (02-spec AC-F2-3) */
   category: z.string().min(1),
+  /** 표현 매체: 3D 모델(GLB) 또는 이미지 자료. repository가 실제 에셋 유무로 검증 */
+  media: z.enum(["model", "image"]).default("model"),
   material: z.string().min(1),
   dimensions: z.string().optional(),
   description: z.string().min(1),
@@ -52,5 +54,20 @@ export type AssetMetrics = z.infer<typeof AssetMetricsSchema>;
 export type Asset3D = z.infer<typeof Asset3DSchema>;
 export type Artifact = z.infer<typeof ArtifactSchema>;
 
+/** 표현 매체 — 3D 모델(GLB) 또는 이미지 자료. repository가 실제 에셋 유무로 해소한다. */
+export type ModelMedia = {
+  kind: "model";
+  glbPath: string;
+  posterPath?: string;
+  metrics: AssetMetrics;
+};
+export type ImageMedia = { kind: "image"; imagePath: string };
+export type ArtifactMedia = ModelMedia | ImageMedia;
+
 /** 발행된 에셋이 결합된 유물 — 화면에 노출 가능한 유일한 형태 (03-domain §4 불변 규칙 1·2) */
-export type ArtifactWithAsset = Artifact & { asset: Asset3D };
+export type ArtifactWithMedia = Artifact & { asset: ArtifactMedia };
+
+/** 카탈로그·전시관 등에서 썸네일·폴백 이미지 경로(모델은 포스터, 이미지 유물은 원본) */
+export function posterOf(a: ArtifactWithMedia): string | undefined {
+  return a.asset.kind === "model" ? a.asset.posterPath : a.asset.imagePath;
+}

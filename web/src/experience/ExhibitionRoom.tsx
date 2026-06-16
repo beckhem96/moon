@@ -125,41 +125,72 @@ function ZoneSign({ category, count, position }: { category: string; count: numb
   );
 }
 
+const WALL_X = 5.7;
+const WALL_H = 8;
+
+/** 유물별 집중 조명 — 박물관 스포트라이트 연출 (그림자 비용 없이 분위기) */
+function Spot({ x, z }: { x: number; z: number }) {
+  const ref = useRef<THREE.SpotLight>(null);
+  const tgt = useRef<THREE.Object3D>(null);
+  useEffect(() => {
+    if (ref.current && tgt.current) ref.current.target = tgt.current;
+  }, []);
+  return (
+    <group>
+      <spotLight
+        ref={ref}
+        position={[x * 0.7, WALL_H - 1, z]}
+        angle={0.5}
+        penumbra={0.8}
+        intensity={90}
+        distance={18}
+        decay={1.4}
+        color="#fff4e0"
+      />
+      <object3D ref={tgt} position={[x, 1.3, z]} />
+    </group>
+  );
+}
+
 function Hall({ exhibition }: { exhibition: ResolvedExhibition }) {
   const { bounds, hallLength, zones } = exhibition;
-  const wallX = 5.7;
   const centerZ = (bounds.minZ + bounds.maxZ) / 2;
   const length = hallLength + 8;
   return (
     <group>
-      {/* 바닥 */}
+      {/* 바닥 — 어두운 광택 마감 */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, centerZ]} receiveShadow>
-        <planeGeometry args={[wallX * 2, length]} />
-        <meshStandardMaterial color="#d6d3d1" roughness={1} />
+        <planeGeometry args={[WALL_X * 2, length]} />
+        <meshStandardMaterial color="#26211d" roughness={0.55} metalness={0.1} />
       </mesh>
-      {/* 구역 바닥 띠(번갈아 음영)로 분류 구역을 시각 구분 */}
-      {zones.map((z, i) => (
-        <mesh
-          key={z.category}
-          rotation={[-Math.PI / 2, 0, 0]}
-          position={[0, 0.01, (z.startZ + z.endZ) / 2]}
-        >
-          <planeGeometry args={[wallX * 2 - 0.6, z.endZ - z.startZ]} />
-          <meshStandardMaterial color={i % 2 === 0 ? "#cfcac4" : "#d8d4ce"} roughness={1} />
+      {/* 구역 입구 바닥 발광 띠로 분류 구역을 구분·강조 */}
+      {zones.map((z) => (
+        <mesh key={z.category} rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.02, z.startZ]}>
+          <planeGeometry args={[WALL_X * 2 - 0.4, 0.25]} />
+          <meshStandardMaterial color="#0ea5e9" emissive="#0ea5e9" emissiveIntensity={1.4} toneMapped={false} />
         </mesh>
       ))}
-      {/* 좌우 벽 */}
+      {/* 좌우 벽 (높게) */}
       {[-1, 1].map((s) => (
-        <mesh key={s} position={[s * wallX, 2.5, centerZ]} rotation={[0, -s * Math.PI / 2, 0]} receiveShadow>
-          <planeGeometry args={[length, 5]} />
-          <meshStandardMaterial color="#1c1917" roughness={1} side={THREE.DoubleSide} />
+        <mesh key={s} position={[s * WALL_X, WALL_H / 2, centerZ]} rotation={[0, (-s * Math.PI) / 2, 0]} receiveShadow>
+          <planeGeometry args={[length, WALL_H]} />
+          <meshStandardMaterial color="#14110f" roughness={1} side={THREE.DoubleSide} />
         </mesh>
       ))}
-      {/* 막다른 벽 */}
-      <mesh position={[0, 2.5, bounds.maxZ + 2]} receiveShadow>
-        <planeGeometry args={[wallX * 2, 5]} />
-        <meshStandardMaterial color="#292524" roughness={1} />
+      {/* 천장 */}
+      <mesh rotation={[Math.PI / 2, 0, 0]} position={[0, WALL_H, centerZ]}>
+        <planeGeometry args={[WALL_X * 2, length]} />
+        <meshStandardMaterial color="#0c0a09" roughness={1} side={THREE.DoubleSide} />
       </mesh>
+      {/* 막다른 벽 */}
+      <mesh position={[0, WALL_H / 2, bounds.maxZ + 2]} receiveShadow>
+        <planeGeometry args={[WALL_X * 2, WALL_H]} />
+        <meshStandardMaterial color="#1c1917" roughness={1} />
+      </mesh>
+      {/* 유물별 스포트라이트 (좌우 벽면) */}
+      {exhibition.placements.map((p) => (
+        <Spot key={p.artifactId} x={p.position[0]} z={p.position[2]} />
+      ))}
     </group>
   );
 }
@@ -352,10 +383,11 @@ export default function ExhibitionRoom({ exhibition }: { exhibition: ResolvedExh
   return (
     <div className="relative h-[70vh] overflow-hidden rounded-2xl bg-neutral-800">
       <KeyboardControls map={KEY_MAP}>
-        <Canvas shadows dpr={[1, 2]} camera={{ fov: 60, near: 0.1, far: 200, position: exhibition.spawn.position }}>
-          <ambientLight intensity={0.7} />
-          <directionalLight position={[5, 12, 7]} intensity={1.6} castShadow />
-          <directionalLight position={[-6, 8, -4]} intensity={0.5} />
+        <Canvas dpr={[1, 1.5]} camera={{ fov: 60, near: 0.1, far: 200, position: exhibition.spawn.position }}>
+          <color attach="background" args={["#08070a"]} />
+          <fog attach="fog" args={["#08070a", 14, 48]} />
+          <ambientLight intensity={0.3} />
+          <hemisphereLight args={["#cfe0ff", "#1a140e", 0.4]} />
           <Suspense fallback={<Loader />}>
             <Hall exhibition={exhibition} />
             {exhibition.zones.map((z) => (

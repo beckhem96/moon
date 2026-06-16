@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { artifactRepository } from "@/src/catalog/repository";
+import { posterOf } from "@/src/catalog/schema";
 import ArtifactViewer from "@/src/experience/ArtifactViewer";
 import DocentChat from "@/src/docent/DocentChat";
 import TourismSection from "@/src/tourism/TourismSection";
@@ -27,7 +29,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${artifact.title} | moon`,
       description,
-      images: artifact.asset.posterPath ? [{ url: artifact.asset.posterPath }] : [],
+      images: posterOf(artifact) ? [{ url: posterOf(artifact)! }] : [],
       type: "website",
     },
   };
@@ -42,7 +44,6 @@ export default async function ArtifactPage({
   const artifact = artifactRepository.getById(id);
   if (!artifact) notFound();
 
-  const { metrics } = artifact.asset;
   const fields: [string, string | undefined][] = [
     ["시대", artifact.era],
     ["재질", artifact.material],
@@ -61,7 +62,7 @@ export default async function ArtifactPage({
     dateCreated: artifact.era,
     ...(artifact.dimensions ? { size: artifact.dimensions } : {}),
     locationCreated: artifact.museum,
-    image: artifact.asset.posterPath,
+    image: posterOf(artifact),
     isAccessibleForFree: true,
     license: "https://www.kogl.or.kr/info/licenseType1.do",
     creditText: `${artifact.attribution.provider} (공공누리 제${artifact.attribution.kogl}유형)`,
@@ -84,14 +85,37 @@ export default async function ArtifactPage({
       </h1>
 
       <div className="mt-4">
-        <ArtifactViewer
-          glbPath={artifact.asset.glbPath}
-          title={artifact.title}
-          posterPath={artifact.asset.posterPath}
-        />
-        <p className="mt-1 text-right text-xs text-neutral-500">
-          드래그로 회전 · 휠/핀치로 확대 — 3D {metrics.publishedSizeMB}MB (원본 대비 {metrics.reductionPct}% 경량화)
-        </p>
+        {artifact.asset.kind === "model" ? (
+          <>
+            <ArtifactViewer
+              glbPath={artifact.asset.glbPath}
+              title={artifact.title}
+              posterPath={artifact.asset.posterPath}
+              dimensions={artifact.dimensions}
+            />
+            <p className="mt-1 text-right text-xs text-neutral-500">
+              드래그로 회전 · 휠/핀치로 확대 · &quot;실제 크기&quot;로 실물 치수 비교 — 3D{" "}
+              {artifact.asset.metrics.publishedSizeMB}MB (원본 대비{" "}
+              {artifact.asset.metrics.reductionPct}% 경량화)
+            </p>
+          </>
+        ) : (
+          <figure>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-neutral-900">
+              <Image
+                src={artifact.asset.imagePath}
+                alt={`${artifact.title} 대표 이미지`}
+                fill
+                sizes="(max-width: 896px) 100vw, 896px"
+                className="object-contain"
+                priority
+              />
+            </div>
+            <figcaption className="mt-1 text-right text-xs text-neutral-500">
+              이미지 자료 — 국립중앙박물관 소장품(공공누리 제{artifact.attribution.kogl}유형)
+            </figcaption>
+          </figure>
+        )}
       </div>
 
       <dl className="mt-6 grid grid-cols-[6rem_1fr] gap-y-1 text-sm">
