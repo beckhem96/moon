@@ -29,6 +29,8 @@ export const ArtifactSchema = z.object({
   title: z.string().min(1),
   titleHanja: z.string().optional(),
   era: z.string().min(1),
+  /** 유물 특징(분류) — src/catalog/taxonomy.ts CATEGORY_ORDER 참조 (02-spec AC-F2-3) */
+  category: z.string().min(1),
   material: z.string().min(1),
   dimensions: z.string().optional(),
   description: z.string().min(1),

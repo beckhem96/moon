@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import puppeteer from "puppeteer";
 const axeSrc = fs.readFileSync("node_modules/axe-core/axe.min.js", "utf-8");
-const pages = [["홈","/"],["카탈로그","/artifacts"],["상세","/artifacts/moon-jar"],["소개","/about"],["임베드","/embed/moon-jar"]];
+const pages = [["홈","/"],["카탈로그","/artifacts"],["상세","/artifacts/moon-jar"],["소개","/about"],["임베드","/embed/moon-jar"],["전시관","/exhibition"]];
 const b = await puppeteer.launch({ args:["--no-sandbox","--disable-setuid-sandbox"] });
 let total = 0;
 for (const [label, path] of pages) {

@@ -1,0 +1,25 @@
+{
+  "id": "nmk-4384",
+  "title": "나주 신촌리 금동관",
+  "era": "삼국시대",
+  "category": "금속공예·장신구",
+  "material": "금동",
+  "dimensions": "길이 19cm, 높이 18.5cm",
+  "description": "나주 신촌리 금동관. 국립중앙박물관이 공개한 3D 디지털 소장품으로, 웹에서 실물처럼 360° 돌려볼 수 있다.",
+  "museum": "국립중앙박물관",
+  "collectionNo": "본관5860",
+  "attribution": {
+    "kogl": 1,
+    "provider": "국립중앙박물관",
+    "sourceUrl": "https://www.museum.go.kr/MUSEUM/contents/M0505000000.do?schM=view&searchId=search&relicId=4384"
+  },
+  "sources": [
+    "국립중앙박물관 소장품 3D 상세(2026-06-16 일괄 수집)"
+  ],
+  "suggestedQuestions": [
+    "이 유물은 무엇에 쓰던 물건인가요?",
+    "어느 시대에 만들어졌고, 그 시대는 어떤 모습이었나요?",
+    "이 유물에서 눈여겨볼 부분은 어디인가요?"
+  ],
+  "featured": false
+}

@@ -124,5 +124,1031 @@
     "triangles": 62811,
     "pipelineVersion": "1.0.0",
     "processedAt": "2026-06-12"
+  },
+  "nmk-141452": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 60.32,
+    "publishedSizeMB": 0.38,
+    "reductionPct": 99.4,
+    "triangles": 47780,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-4262": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 39.25,
+    "publishedSizeMB": 0.54,
+    "reductionPct": 98.6,
+    "triangles": 35560,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-36551575": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 63.05,
+    "publishedSizeMB": 1.08,
+    "reductionPct": 98.3,
+    "triangles": 193466,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-36548992": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 155.33,
+    "publishedSizeMB": 2,
+    "reductionPct": 98.7,
+    "triangles": 489758,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-36548993": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 126.55,
+    "publishedSizeMB": 1.28,
+    "reductionPct": 99,
+    "triangles": 210548,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-36549740": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 75.19,
+    "publishedSizeMB": 1.39,
+    "reductionPct": 98.2,
+    "triangles": 128651,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-618": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 63.2,
+    "publishedSizeMB": 0.91,
+    "reductionPct": 98.6,
+    "triangles": 211522,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-35820012": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 81.17,
+    "publishedSizeMB": 1.05,
+    "reductionPct": 98.7,
+    "triangles": 207228,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-957": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 187.37,
+    "publishedSizeMB": 1.62,
+    "reductionPct": 99.1,
+    "triangles": 315064,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-6952": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 54.01,
+    "publishedSizeMB": 1,
+    "reductionPct": 98.1,
+    "triangles": 162349,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-4220": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 68.44,
+    "publishedSizeMB": 1.21,
+    "reductionPct": 98.2,
+    "triangles": 334946,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1126": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 42.85,
+    "publishedSizeMB": 0.61,
+    "reductionPct": 98.6,
+    "triangles": 22588,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-964": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 95.73,
+    "publishedSizeMB": 0.89,
+    "reductionPct": 99.1,
+    "triangles": 91017,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1296": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 41.88,
+    "publishedSizeMB": 0.8,
+    "reductionPct": 98.1,
+    "triangles": 100240,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1917": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 119.67,
+    "publishedSizeMB": 0.47,
+    "reductionPct": 99.6,
+    "triangles": 30844,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1991": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 28.48,
+    "publishedSizeMB": 0.32,
+    "reductionPct": 98.9,
+    "triangles": 31942,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1351": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 52.19,
+    "publishedSizeMB": 0.47,
+    "reductionPct": 99.1,
+    "triangles": 23400,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1476": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 108.91,
+    "publishedSizeMB": 0.57,
+    "reductionPct": 99.5,
+    "triangles": 21810,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-17027": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 81.03,
+    "publishedSizeMB": 0.48,
+    "reductionPct": 99.4,
+    "triangles": 39403,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-2397": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 55.55,
+    "publishedSizeMB": 0.57,
+    "reductionPct": 99,
+    "triangles": 33156,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-2350": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 56.41,
+    "publishedSizeMB": 0.54,
+    "reductionPct": 99,
+    "triangles": 32284,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-29907": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 47.52,
+    "publishedSizeMB": 0.57,
+    "reductionPct": 98.8,
+    "triangles": 55506,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1921": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 49.99,
+    "publishedSizeMB": 0.58,
+    "reductionPct": 98.8,
+    "triangles": 59034,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-941": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 37.6,
+    "publishedSizeMB": 0.16,
+    "reductionPct": 99.6,
+    "triangles": 24608,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-2224": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 45.88,
+    "publishedSizeMB": 0.27,
+    "reductionPct": 99.4,
+    "triangles": 20642,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-2203": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 51.27,
+    "publishedSizeMB": 0.28,
+    "reductionPct": 99.5,
+    "triangles": 20574,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-185757": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 64.81,
+    "publishedSizeMB": 0.53,
+    "reductionPct": 99.2,
+    "triangles": 42532,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1233": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 71.79,
+    "publishedSizeMB": 0.7,
+    "reductionPct": 99,
+    "triangles": 32228,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-2552": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 117.77,
+    "publishedSizeMB": 0.53,
+    "reductionPct": 99.5,
+    "triangles": 47084,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-896": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 62.77,
+    "publishedSizeMB": 0.6,
+    "reductionPct": 99,
+    "triangles": 54198,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-63475": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 63.27,
+    "publishedSizeMB": 0.51,
+    "reductionPct": 99.2,
+    "triangles": 29470,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1255": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 38.24,
+    "publishedSizeMB": 0.54,
+    "reductionPct": 98.6,
+    "triangles": 72508,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-981": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 61.4,
+    "publishedSizeMB": 0.57,
+    "reductionPct": 99.1,
+    "triangles": 79542,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1248": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 54.67,
+    "publishedSizeMB": 0.63,
+    "reductionPct": 98.8,
+    "triangles": 43164,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-8218": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 60.41,
+    "publishedSizeMB": 0.59,
+    "reductionPct": 99,
+    "triangles": 65948,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-968": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 68.08,
+    "publishedSizeMB": 0.8,
+    "reductionPct": 98.8,
+    "triangles": 78364,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1116": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 97.44,
+    "publishedSizeMB": 0.46,
+    "reductionPct": 99.5,
+    "triangles": 58026,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1191": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 44.21,
+    "publishedSizeMB": 0.56,
+    "reductionPct": 98.7,
+    "triangles": 27762,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-6220": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 57.13,
+    "publishedSizeMB": 0.44,
+    "reductionPct": 99.2,
+    "triangles": 30354,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-6210": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 55.56,
+    "publishedSizeMB": 0.51,
+    "reductionPct": 99.1,
+    "triangles": 11875,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-472": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 50.22,
+    "publishedSizeMB": 0.48,
+    "reductionPct": 99,
+    "triangles": 44218,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-4769": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 61.28,
+    "publishedSizeMB": 0.7,
+    "reductionPct": 98.9,
+    "triangles": 25876,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-48738": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 111.45,
+    "publishedSizeMB": 0.4,
+    "reductionPct": 99.6,
+    "triangles": 26808,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-223244": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 66.42,
+    "publishedSizeMB": 0.58,
+    "reductionPct": 99.1,
+    "triangles": 22590,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-208708": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 56.49,
+    "publishedSizeMB": 0.62,
+    "reductionPct": 98.9,
+    "triangles": 49062,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-180304": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 27.37,
+    "publishedSizeMB": 0.4,
+    "reductionPct": 98.5,
+    "triangles": 37236,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-186306": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 22.09,
+    "publishedSizeMB": 0.35,
+    "reductionPct": 98.4,
+    "triangles": 26326,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-35863517": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 42.51,
+    "publishedSizeMB": 0.56,
+    "reductionPct": 98.7,
+    "triangles": 28136,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-35861817": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 29.76,
+    "publishedSizeMB": 0.52,
+    "reductionPct": 98.3,
+    "triangles": 45590,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-98255": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 44.86,
+    "publishedSizeMB": 0.59,
+    "reductionPct": 98.7,
+    "triangles": 29800,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-102610": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 44.08,
+    "publishedSizeMB": 0.71,
+    "reductionPct": 98.4,
+    "triangles": 17930,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1213": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 26.18,
+    "publishedSizeMB": 0.33,
+    "reductionPct": 98.7,
+    "triangles": 28798,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-7167": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 33,
+    "publishedSizeMB": 0.49,
+    "reductionPct": 98.5,
+    "triangles": 17570,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-87091": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 69.32,
+    "publishedSizeMB": 0.61,
+    "reductionPct": 99.1,
+    "triangles": 32234,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-126213": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 77.08,
+    "publishedSizeMB": 0.65,
+    "reductionPct": 99.2,
+    "triangles": 34750,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-109080": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 62.69,
+    "publishedSizeMB": 0.52,
+    "reductionPct": 99.2,
+    "triangles": 33126,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-123489": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 83.46,
+    "publishedSizeMB": 0.82,
+    "reductionPct": 99,
+    "triangles": 85412,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-4219": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 26.36,
+    "publishedSizeMB": 0.42,
+    "reductionPct": 98.4,
+    "triangles": 43184,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1431": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 30.23,
+    "publishedSizeMB": 0.64,
+    "reductionPct": 97.9,
+    "triangles": 191770,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1734": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 20.39,
+    "publishedSizeMB": 0.24,
+    "reductionPct": 98.8,
+    "triangles": 62551,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1096": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 44.66,
+    "publishedSizeMB": 0.3,
+    "reductionPct": 99.3,
+    "triangles": 82528,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-2132": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 63.76,
+    "publishedSizeMB": 0.3,
+    "reductionPct": 99.5,
+    "triangles": 92924,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-2131": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 130.78,
+    "publishedSizeMB": 0.46,
+    "reductionPct": 99.6,
+    "triangles": 95309,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-35845520": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 28.09,
+    "publishedSizeMB": 0.55,
+    "reductionPct": 98,
+    "triangles": 100073,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-4359": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 26.99,
+    "publishedSizeMB": 0.51,
+    "reductionPct": 98.1,
+    "triangles": 78438,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-4389": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 28.13,
+    "publishedSizeMB": 0.55,
+    "reductionPct": 98,
+    "triangles": 98530,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-856": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 59.64,
+    "publishedSizeMB": 0.68,
+    "reductionPct": 98.9,
+    "triangles": 78352,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-4362": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 59.16,
+    "publishedSizeMB": 0.64,
+    "reductionPct": 98.9,
+    "triangles": 93590,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-196874": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 33.18,
+    "publishedSizeMB": 0.69,
+    "reductionPct": 97.9,
+    "triangles": 94241,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-179706": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 28.61,
+    "publishedSizeMB": 0.55,
+    "reductionPct": 98.1,
+    "triangles": 94648,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-4390": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 27.12,
+    "publishedSizeMB": 0.57,
+    "reductionPct": 97.9,
+    "triangles": 89722,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-188866": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 22.66,
+    "publishedSizeMB": 0.51,
+    "reductionPct": 97.7,
+    "triangles": 62846,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1969": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 78.35,
+    "publishedSizeMB": 0.36,
+    "reductionPct": 99.5,
+    "triangles": 39760,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-4229": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 27.97,
+    "publishedSizeMB": 0.43,
+    "reductionPct": 98.5,
+    "triangles": 135364,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1226": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 34.61,
+    "publishedSizeMB": 0.45,
+    "reductionPct": 98.7,
+    "triangles": 130066,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-350": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 119.13,
+    "publishedSizeMB": 1.45,
+    "reductionPct": 98.8,
+    "triangles": 666512,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-4384": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 154.56,
+    "publishedSizeMB": 3.01,
+    "reductionPct": 98.1,
+    "triangles": 696871,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1484": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 35.92,
+    "publishedSizeMB": 0.64,
+    "reductionPct": 98.2,
+    "triangles": 176028,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-958": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 33.21,
+    "publishedSizeMB": 0.6,
+    "reductionPct": 98.2,
+    "triangles": 18766,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-482": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 37.73,
+    "publishedSizeMB": 0.59,
+    "reductionPct": 98.4,
+    "triangles": 28980,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1768": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 38.15,
+    "publishedSizeMB": 0.52,
+    "reductionPct": 98.6,
+    "triangles": 163826,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1515": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 19.49,
+    "publishedSizeMB": 0.16,
+    "reductionPct": 99.2,
+    "triangles": 156580,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-967": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 37.43,
+    "publishedSizeMB": 0.52,
+    "reductionPct": 98.6,
+    "triangles": 171326,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-974": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 36.02,
+    "publishedSizeMB": 0.46,
+    "reductionPct": 98.7,
+    "triangles": 172842,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-4385": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 26.71,
+    "publishedSizeMB": 0.7,
+    "reductionPct": 97.4,
+    "triangles": 199024,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1475": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 34.1,
+    "publishedSizeMB": 0.56,
+    "reductionPct": 98.4,
+    "triangles": 183668,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1160": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 40.2,
+    "publishedSizeMB": 0.71,
+    "reductionPct": 98.2,
+    "triangles": 191438,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-2074": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 49.33,
+    "publishedSizeMB": 0.59,
+    "reductionPct": 98.8,
+    "triangles": 215978,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-655": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 22.48,
+    "publishedSizeMB": 0.39,
+    "reductionPct": 98.3,
+    "triangles": 107100,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1477": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 28.32,
+    "publishedSizeMB": 0.53,
+    "reductionPct": 98.1,
+    "triangles": 194787,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-4269": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 33.01,
+    "publishedSizeMB": 0.65,
+    "reductionPct": 98,
+    "triangles": 163418,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1227": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 69.61,
+    "publishedSizeMB": 0.64,
+    "reductionPct": 99.1,
+    "triangles": 72668,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-355": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 35.47,
+    "publishedSizeMB": 0.48,
+    "reductionPct": 98.6,
+    "triangles": 167594,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-858": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 47.45,
+    "publishedSizeMB": 0.64,
+    "reductionPct": 98.7,
+    "triangles": 196665,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-857": {
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 63.41,
+    "publishedSizeMB": 0.59,
+    "reductionPct": 99.1,
+    "triangles": 32126,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1149": {
+    "sourceFormat": "PLY",
+    "sourceSizeMB": 13.24,
+    "publishedSizeMB": 0.34,
+    "reductionPct": 97.4,
+    "triangles": 119938,
+    "pipelineVersion": "1.0.0-ply",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-709": {
+    "sourceFormat": "PLY",
+    "sourceSizeMB": 2.86,
+    "publishedSizeMB": 0.29,
+    "reductionPct": 89.9,
+    "triangles": 119993,
+    "pipelineVersion": "1.0.0-ply",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-358": {
+    "sourceFormat": "PLY",
+    "sourceSizeMB": 2.47,
+    "publishedSizeMB": 0.32,
+    "reductionPct": 87,
+    "triangles": 119982,
+    "pipelineVersion": "1.0.0-ply",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1204": {
+    "sourceFormat": "PLY",
+    "sourceSizeMB": 2.45,
+    "publishedSizeMB": 0.29,
+    "reductionPct": 88.2,
+    "triangles": 119999,
+    "pipelineVersion": "1.0.0-ply",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-4244": {
+    "sourceFormat": "PLY",
+    "sourceSizeMB": 4.28,
+    "publishedSizeMB": 0.35,
+    "reductionPct": 91.8,
+    "triangles": 118488,
+    "pipelineVersion": "1.0.0-ply",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-2049": {
+    "sourceFormat": "PLY",
+    "sourceSizeMB": 3.55,
+    "publishedSizeMB": 0.31,
+    "reductionPct": 91.3,
+    "triangles": 119742,
+    "pipelineVersion": "1.0.0-ply",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1766": {
+    "sourceFormat": "PLY",
+    "sourceSizeMB": 2.95,
+    "publishedSizeMB": 0.3,
+    "reductionPct": 89.8,
+    "triangles": 119943,
+    "pipelineVersion": "1.0.0-ply",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1494": {
+    "sourceFormat": "PLY",
+    "sourceSizeMB": 2.06,
+    "publishedSizeMB": 0.31,
+    "reductionPct": 85,
+    "triangles": 112713,
+    "pipelineVersion": "1.0.0-ply",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-4275": {
+    "sourceFormat": "PLY",
+    "sourceSizeMB": 2.71,
+    "publishedSizeMB": 0.33,
+    "reductionPct": 87.8,
+    "triangles": 119795,
+    "pipelineVersion": "1.0.0-ply",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-4381": {
+    "sourceFormat": "PLY",
+    "sourceSizeMB": 3.85,
+    "publishedSizeMB": 0.34,
+    "reductionPct": 91.2,
+    "triangles": 119992,
+    "pipelineVersion": "1.0.0-ply",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1978": {
+    "sourceFormat": "PLY",
+    "sourceSizeMB": 3.68,
+    "publishedSizeMB": 0.3,
+    "reductionPct": 91.8,
+    "triangles": 119997,
+    "pipelineVersion": "1.0.0-ply",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1955": {
+    "sourceFormat": "PLY",
+    "sourceSizeMB": 4.91,
+    "publishedSizeMB": 0.32,
+    "reductionPct": 93.5,
+    "triangles": 119967,
+    "pipelineVersion": "1.0.0-ply",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-662": {
+    "sourceFormat": "PLY",
+    "sourceSizeMB": 1.99,
+    "publishedSizeMB": 0.28,
+    "reductionPct": 85.9,
+    "triangles": 109685,
+    "pipelineVersion": "1.0.0-ply",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-1193": {
+    "sourceFormat": "PLY",
+    "sourceSizeMB": 1.21,
+    "publishedSizeMB": 0.17,
+    "reductionPct": 86,
+    "triangles": 66991,
+    "pipelineVersion": "1.0.0-ply",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-372": {
+    "sourceFormat": "PLY",
+    "sourceSizeMB": 6.1,
+    "publishedSizeMB": 0.32,
+    "reductionPct": 94.8,
+    "triangles": 119838,
+    "pipelineVersion": "1.0.0-ply",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-3802": {
+    "sourceFormat": "PLY",
+    "sourceSizeMB": 3.34,
+    "publishedSizeMB": 0.33,
+    "reductionPct": 90.1,
+    "triangles": 119974,
+    "pipelineVersion": "1.0.0-ply",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-768": {
+    "sourceFormat": "PLY",
+    "sourceSizeMB": 3.3,
+    "publishedSizeMB": 0.32,
+    "reductionPct": 90.3,
+    "triangles": 119986,
+    "pipelineVersion": "1.0.0-ply",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-767": {
+    "sourceFormat": "PLY",
+    "sourceSizeMB": 3.74,
+    "publishedSizeMB": 0.32,
+    "reductionPct": 91.4,
+    "triangles": 119975,
+    "pipelineVersion": "1.0.0-ply",
+    "processedAt": "2026-06-16"
+  },
+  "nmk-706": {
+    "sourceFormat": "PLY",
+    "sourceSizeMB": 2.88,
+    "publishedSizeMB": 0.3,
+    "reductionPct": 89.6,
+    "triangles": 119998,
+    "pipelineVersion": "1.0.0-ply",
+    "processedAt": "2026-06-16"
   }
 }

@@ -16,12 +16,14 @@
 | 출처표시 | `Attribution` | 공공누리 유형 + 제공기관 + 원천 URL. 유물 필수 구성요소 (헌법 §1) | Catalog |
 | 공공누리 | `KOGL` | 공공저작물 자유이용허락 표시제도 (1~4유형, 본 서비스는 1유형 위주) | Catalog |
 | 소장처 | `Museum` | 유물을 소장한 기관 (예: 국립중앙박물관) | Catalog |
-| 시대 | `Era` | 유물 제작 시기 분류 (선사·삼국·통일신라·고려·조선·근대 등) | Catalog |
+| 시대 | `Era` | 유물 제작 시기 분류 (신석기·청동기·초기철기·낙랑·삼국시대·신라·통일신라·고려·조선). 연대순 정렬 기준은 `taxonomy.ERA_ORDER` | Catalog |
+| 분류 | `Category` | 유물 특징에 따른 갈래 (토기·도기 / 청동기 / 금속공예·장신구 / 불교조각 / 도자기). 카탈로그 필터·전시관 구역의 기준. `taxonomy.CATEGORY_ORDER` | Catalog |
 | 재질 | `Material` | 유물 재질 분류 (금속·토제·도자기·석·목·지류 등) | Catalog |
 | 연고지 | `HeritageSite` | 유물과 지리적 연고가 있는 장소 (출토지·원소재지·소장처 위치) + 좌표 | Tourism |
 | 관광정보 | `TourismInfo` | 연고지 주변 관광지·시설 정보 (TourAPI 유래) | Tourism |
-| 가상 전시관 | `Exhibition` | 유물을 3D 공간에 배치한 가상 공간 | Experience |
-| 전시 배치 | `Placement` | 전시관 내 유물의 위치·회전·크기 | Experience |
+| 가상 전시관 | `Exhibition` | 유물을 3D 공간에 배치한 가상 공간. 키보드 1인칭 보행으로 관람 | Experience |
+| 전시 구역 | `ExhibitionZone` | 한 분류(`Category`)의 유물이 모인 전시실 구역. 표지·바닥 음영으로 구분 | Experience |
+| 전시 배치 | `Placement` | 전시관 내 유물의 위치·회전·크기 (구역·분류 체계에서 자동 생성) | Experience |
 | 도슨트 세션 | `DocentSession` | 특정 유물 맥락의 대화형 해설 세션 (클라이언트 보관, 서버 무상태) | Docent |
 | 해설 | `Narration` | 도슨트가 생성한 설명 텍스트 (스트리밍) | Docent |
 | 큐레이션 노트 | `CurationNote` | 빌드타임 AI 생성 + 사람 검수를 거친 감상 포인트 (F8) | Catalog |
@@ -81,7 +83,7 @@ graph TB
 Artifact {
   id: ArtifactId            // slug, 전 컨텍스트 공유 식별자
   title: string             // 명칭 (예: "금동미륵보살반가사유상")
-  era: Era; material: Material
+  era: Era; category: Category; material: Material
   dimensions?: string       // "높이 93.5cm" 등 원문 그대로
   description: string       // 정제된 설명 (e뮤지엄 유래 시 출처 식별)
   museum: Museum            // 소장처
@@ -116,11 +118,15 @@ HeritageSite {
 // TourismInfo는 TourAPI 응답을 ACL로 변환한 읽기 모델 (저장하지 않음, 캐시만)
 
 // ── Experience: Exhibition 애그리거트 ───────────────────
+// placements·zones는 저장소(등록·발행 유물) + 분류 체계(taxonomy)에서 파생 생성된다.
 Exhibition {
-  id: string, title: string, theme: string
-  placements: Placement[]   // ≥4 (AC-F6-1)
+  id: string, title: string, theme: string   // content/exhibitions.json은 메타만 보관
+  zones: ExhibitionZone[]    // 분류별 구역 (AC-F6-1·F6-4)
+  placements: Placement[]    // ≥4, 전 구역 평탄화 (AC-F6-1)
+  bounds, spawn, hallLength   // 1인칭 보행 경계·시작점·복도 길이
 }
-Placement { artifactId: ArtifactId, position: Vec3, rotationY: number, scale: number }
+ExhibitionZone { category: Category, count: number, signPosition: Vec3, startZ, endZ }
+Placement { artifactId, category, position: Vec3, rotationY: number, scale: number }
 
 // ── Docent (서버 무상태) ────────────────────────────────
 DocentSession {              // 클라이언트가 보관, 요청마다 전체 전달

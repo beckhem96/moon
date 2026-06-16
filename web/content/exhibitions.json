@@ -1,15 +1,7 @@
 [
   {
-    "id": "korea-through-time",
-    "title": "시대를 걷다",
-    "theme": "신석기부터 조선까지, 한국 문화유산을 시대순으로 거니는 가상 전시실",
-    "placements": [
-      { "artifactId": "comb-pattern-pottery", "position": [-7.5, 0, 0], "rotationY": 0.4, "scale": 1.2 },
-      { "artifactId": "shield-shaped-bronze", "position": [-4.5, 0, 0], "rotationY": 0.2, "scale": 1.2 },
-      { "artifactId": "gold-cap", "position": [-1.5, 0, 0], "rotationY": 0, "scale": 1.2 },
-      { "artifactId": "pensive-bodhisattva-4358", "position": [1.5, 0, 0], "rotationY": 0, "scale": 1.2 },
-      { "artifactId": "celadon-maebyeong-waterfowl", "position": [4.5, 0, 0], "rotationY": -0.2, "scale": 1.2 },
-      { "artifactId": "moon-jar", "position": [7.5, 0, 0], "rotationY": -0.4, "scale": 1.2 }
-    ]
+    "id": "korea-heritage-hall",
+    "title": "분류별 상설 전시실",
+    "theme": "토기·청동기·금속공예·불교조각·도자기 — 유물의 특징(분류)에 따라 나뉜 전시실을 키보드로 거닐며, 각 구역 안에서는 시대순으로 한국 문화유산을 관람합니다."
   }
 ]

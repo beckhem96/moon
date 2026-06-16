@@ -5,7 +5,7 @@ import CatalogBrowser from "@/src/catalog/CatalogBrowser";
 
 export const metadata: Metadata = {
   title: "유물 카탈로그",
-  description: "국립중앙박물관 공개 3D 데이터로 만나는 한국 문화유산 — 시대·재질별로 찾아보세요.",
+  description: "국립중앙박물관 공개 3D 데이터로 만나는 한국 문화유산 — 시대순·분류별로 찾아보세요.",
 };
 
 export default function ArtifactsPage() {
@@ -14,6 +14,7 @@ export default function ArtifactsPage() {
     title: a.title,
     titleHanja: a.titleHanja,
     era: a.era,
+    category: a.category,
     material: a.material,
     museum: a.museum,
     posterPath: a.asset.posterPath,

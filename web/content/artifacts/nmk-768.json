@@ -1,0 +1,25 @@
+{
+  "id": "nmk-768",
+  "title": "금제 여래입상",
+  "era": "통일신라",
+  "category": "불교조각",
+  "material": "금",
+  "dimensions": "높이 14cm",
+  "description": "금제 여래입상. 국립중앙박물관이 공개한 3D 스캔 디지털 소장품으로, 웹에서 실물 형태를 360° 돌려볼 수 있다.",
+  "museum": "국립중앙박물관",
+  "collectionNo": "본관14753",
+  "attribution": {
+    "kogl": 1,
+    "provider": "국립중앙박물관",
+    "sourceUrl": "https://www.museum.go.kr/MUSEUM/contents/M0505000000.do?schM=view&searchId=search&relicId=768"
+  },
+  "sources": [
+    "국립중앙박물관 소장품 3D(스캔 PLY) 상세(2026-06-16 일괄 수집)"
+  ],
+  "suggestedQuestions": [
+    "이 유물은 무엇에 쓰던 물건인가요?",
+    "어느 시대에 만들어졌고, 그 시대는 어떤 모습이었나요?",
+    "이 유물에서 눈여겨볼 부분은 어디인가요?"
+  ],
+  "featured": false
+}
