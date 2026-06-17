@@ -33,6 +33,8 @@ export const ArtifactSchema = z.object({
   category: z.string().min(1),
   /** 표현 매체: 3D 모델(GLB) 또는 이미지 자료. repository가 실제 에셋 유무로 검증 */
   media: z.enum(["model", "image"]).default("model"),
+  /** 쓰임새 — 유물이 실제로 어떻게 쓰였는지 (시대별 대표 유물에 부여, F9 생활 장면·도슨트) */
+  usage: z.string().optional(),
   material: z.string().min(1),
   dimensions: z.string().optional(),
   description: z.string().min(1),

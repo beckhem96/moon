@@ -1,0 +1,93 @@
+[
+  {
+    "eraId": "구석기",
+    "setting": "prehistoric",
+    "title": "사냥과 채집의 들판",
+    "items": [
+      { "artifactId": "nmk-img-23715", "role": "사냥·도살", "x": 24, "y": 60 },
+      { "artifactId": "nmk-img-110776", "role": "찍고 부수기", "x": 50, "y": 66 },
+      { "artifactId": "nmk-img-21421", "role": "가죽 손질", "x": 76, "y": 60 }
+    ]
+  },
+  {
+    "eraId": "신석기",
+    "setting": "prehistoric",
+    "title": "강가의 첫 마을",
+    "items": [
+      { "artifactId": "comb-pattern-pottery", "role": "음식 저장·조리", "x": 20, "y": 58 },
+      { "artifactId": "nmk-img-28120", "role": "곡물 갈기", "x": 44, "y": 66 },
+      { "artifactId": "nmk-img-148383", "role": "곡물 받침", "x": 62, "y": 70 },
+      { "artifactId": "nmk-img-177930", "role": "땅 일구기", "x": 82, "y": 60 }
+    ]
+  },
+  {
+    "eraId": "청동기",
+    "setting": "prehistoric",
+    "title": "벼농사와 우두머리",
+    "items": [
+      { "artifactId": "nmk-img-2040", "role": "무기·권위", "x": 24, "y": 58 },
+      { "artifactId": "nmk-img-32626", "role": "이삭 수확", "x": 50, "y": 66 },
+      { "artifactId": "nmk-img-2179", "role": "곡식 저장", "x": 76, "y": 60 }
+    ]
+  },
+  {
+    "eraId": "초기철기",
+    "setting": "prehistoric",
+    "title": "철기와 제사장",
+    "items": [
+      { "artifactId": "nmk-1991", "role": "농경 제사", "x": 24, "y": 58 },
+      { "artifactId": "nmk-img-108886", "role": "무기·의기", "x": 50, "y": 64 },
+      { "artifactId": "nmk-img-1994", "role": "제사 의기", "x": 76, "y": 58 }
+    ]
+  },
+  {
+    "eraId": "신라",
+    "setting": "royal",
+    "title": "황금의 나라",
+    "items": [
+      { "artifactId": "gold-cap", "role": "왕의 의례", "x": 26, "y": 56 },
+      { "artifactId": "nmk-3802", "role": "장례 부장", "x": 52, "y": 64 },
+      { "artifactId": "spouted-pottery", "role": "액체 따르기", "x": 78, "y": 62 }
+    ]
+  },
+  {
+    "eraId": "삼국시대",
+    "setting": "royal",
+    "title": "불교를 받아들이다",
+    "items": [
+      { "artifactId": "pensive-bodhisattva-4358", "role": "예배·명상", "x": 26, "y": 56 },
+      { "artifactId": "nmk-4384", "role": "위세 상징", "x": 52, "y": 58 },
+      { "artifactId": "nmk-1978", "role": "기원 예배", "x": 78, "y": 58 }
+    ]
+  },
+  {
+    "eraId": "통일신라",
+    "setting": "temple",
+    "title": "법당의 부처",
+    "items": [
+      { "artifactId": "iron-buddha", "role": "법당 예배", "x": 36, "y": 58 },
+      { "artifactId": "nmk-767", "role": "사리 공양", "x": 66, "y": 60 }
+    ]
+  },
+  {
+    "eraId": "고려",
+    "setting": "craft",
+    "title": "비취색 청자의 시대",
+    "items": [
+      { "artifactId": "celadon-maebyeong-waterfowl", "role": "술·꿀 저장", "x": 18, "y": 58 },
+      { "artifactId": "nmk-1227", "role": "향 피우기", "x": 42, "y": 62 },
+      { "artifactId": "nmk-1226", "role": "불교 정수", "x": 62, "y": 60 },
+      { "artifactId": "bronze-vajra-bell", "role": "의식 법구", "x": 82, "y": 58 }
+    ]
+  },
+  {
+    "eraId": "조선",
+    "setting": "craft",
+    "title": "절제의 백자",
+    "items": [
+      { "artifactId": "moon-jar", "role": "저장·감상", "x": 26, "y": 56 },
+      { "artifactId": "nmk-1484", "role": "저장", "x": 52, "y": 62 },
+      { "artifactId": "nmk-1768", "role": "생활 그릇", "x": 78, "y": 60 }
+    ]
+  }
+]

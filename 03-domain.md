@@ -20,6 +20,8 @@
 | 분류 | `Category` | 유물 특징에 따른 갈래 (석기 / 토기·도기 / 청동기 / 금속공예·장신구 / 불교조각 / 도자기). 카탈로그 필터·전시관 구역의 기준. `taxonomy.CATEGORY_ORDER` | Catalog |
 | 표현 매체 | `ArtifactMedia` | 유물의 노출 형태 — 3D 모델(`ModelMedia`: GLB+포스터+지표) 또는 이미지 자료(`ImageMedia`: 대표 이미지). repository가 에셋 유무로 해소 | Catalog |
 | 시대 타임라인 | `Timeline` | 시대(`Era`)를 연대순으로 배열하고 시대 배경(편집 요약)과 유물을 함께 보여주는 탐색 화면 | Experience |
+| 쓰임새 | `Usage` | 유물이 실제로 어떻게 쓰였는지(기능). 대표 유물에 부여되어 생활 장면·상세·도슨트에서 노출 | Catalog |
+| 생활 장면 | `EraScene` | 양식화 배경 위에 실제 유물을 배치하고 클릭 시 쓰임새를 보여주는 시대별 인터랙티브 화면 | Experience |
 | 재질 | `Material` | 유물 재질 분류 (금속·토제·도자기·석·목·지류 등) | Catalog |
 | 연고지 | `HeritageSite` | 유물과 지리적 연고가 있는 장소 (출토지·원소재지·소장처 위치) + 좌표 | Tourism |
 | 관광정보 | `TourismInfo` | 연고지 주변 관광지·시설 정보 (TourAPI 유래) | Tourism |

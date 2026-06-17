@@ -12,7 +12,7 @@ export interface ChatMessage {
 /** 도슨트 컨텍스트로 주입되는 유물 정보 (서버에서 저장소로 조회 — 클라이언트 값 신뢰 안 함) */
 export type ArtifactContext = Pick<
   Artifact,
-  "title" | "era" | "material" | "dimensions" | "description" | "museum" | "attribution"
+  "title" | "era" | "material" | "dimensions" | "description" | "museum" | "attribution" | "usage"
 >;
 
 export interface DocentProvider {

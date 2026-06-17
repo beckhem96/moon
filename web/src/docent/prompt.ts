@@ -13,6 +13,7 @@ export function buildSystemPrompt(artifact: ArtifactContext): string {
     `- 시대: ${artifact.era} / 재질: ${artifact.material}${artifact.dimensions ? ` / 크기: ${artifact.dimensions}` : ""}`,
     `- 소장처: ${artifact.museum} (공공누리 제${artifact.attribution.kogl}유형)`,
     `- 설명: ${artifact.description}`,
+    ...(artifact.usage ? [`- 쓰임새: ${artifact.usage}`] : []),
     "",
     "## 원칙",
     "1. 위 정보와 일반적으로 확립된 한국사 지식 안에서만 답합니다.",

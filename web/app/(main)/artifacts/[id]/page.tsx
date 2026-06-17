@@ -129,6 +129,15 @@ export default async function ArtifactPage({
 
       <p className="mt-4 leading-relaxed">{artifact.description}</p>
 
+      {artifact.usage && (
+        <div className="mt-5 rounded-xl border border-sky-100 bg-sky-50/60 p-4">
+          <h2 className="flex items-center gap-1.5 text-sm font-semibold text-sky-900">
+            <span aria-hidden>🛠️</span> 쓰임새 — 이렇게 썼어요
+          </h2>
+          <p className="mt-1.5 leading-relaxed text-neutral-700">{artifact.usage}</p>
+        </div>
+      )}
+
       <div className="mt-8">
         <DocentChat artifactId={artifact.id} suggestedQuestions={artifact.suggestedQuestions} />
       </div>

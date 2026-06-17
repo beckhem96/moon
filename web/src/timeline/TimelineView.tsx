@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import EraScene, { type EraSceneData } from "./EraScene";
 
 /** 02-spec F9 시대 타임라인 — 시대별 배경 + 유물을 클릭해 탐색 (3D·이미지 혼합) */
 
@@ -21,7 +22,13 @@ export interface TimelineEra {
   artifacts: TimelineArtifact[];
 }
 
-export default function TimelineView({ eras }: { eras: TimelineEra[] }) {
+export default function TimelineView({
+  eras,
+  scenes = {},
+}: {
+  eras: TimelineEra[];
+  scenes?: Record<string, EraSceneData>;
+}) {
   const [open, setOpen] = useState<string>(eras[0]?.id ?? "");
 
   return (
@@ -82,6 +89,15 @@ export default function TimelineView({ eras }: { eras: TimelineEra[] }) {
                     <p className="leading-relaxed text-neutral-800">{e.summary}</p>
                     <p className="mt-2 text-sm leading-relaxed text-neutral-600">{e.life}</p>
                   </div>
+
+                  {scenes[e.id] && (
+                    <div className="mt-4">
+                      <h3 className="mb-2 text-sm font-semibold text-neutral-700">
+                        이렇게 썼어요 — 생활 장면 <span className="font-normal text-neutral-500">(유물을 눌러보세요)</span>
+                      </h3>
+                      <EraScene scene={scenes[e.id]} />
+                    </div>
+                  )}
 
                   <ul className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
                     {e.artifacts.map((a) => (

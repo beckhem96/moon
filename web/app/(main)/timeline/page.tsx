@@ -5,6 +5,7 @@ import Link from "next/link";
 import { artifactRepository } from "@/src/catalog/repository";
 import { posterOf } from "@/src/catalog/schema";
 import TimelineView, { type TimelineEra } from "@/src/timeline/TimelineView";
+import type { EraSceneData } from "@/src/timeline/EraScene";
 
 export const metadata: Metadata = {
   title: "시대 타임라인",
@@ -24,6 +25,21 @@ export default function TimelinePage() {
     fs.readFileSync(path.join(process.cwd(), "content", "eras.json"), "utf-8"),
   );
   const artifacts = artifactRepository.getAll();
+
+  // 생활 장면: 레이아웃(era-scenes.json) + 저장소에서 유물 정보(제목·이미지·쓰임새) 해소
+  type RawScene = { eraId: string; setting: string; title: string; items: { artifactId: string; role: string; x: number; y: number }[] };
+  const rawScenes: RawScene[] = JSON.parse(
+    fs.readFileSync(path.join(process.cwd(), "content", "era-scenes.json"), "utf-8"),
+  );
+  const scenes: Record<string, EraSceneData> = {};
+  for (const s of rawScenes) {
+    const items = s.items.flatMap((it) => {
+      const a = artifactRepository.getById(it.artifactId);
+      if (!a) return [];
+      return [{ ...it, title: a.title, imagePath: posterOf(a), usage: a.usage }];
+    });
+    if (items.length) scenes[s.eraId] = { eraId: s.eraId, setting: s.setting, title: s.title, items };
+  }
 
   const data: TimelineEra[] = eras
     .map((e) => ({
@@ -52,7 +68,7 @@ export default function TimelinePage() {
       <p className="mb-6 text-xs text-neutral-500">
         ※ 시대 개요는 이해를 돕기 위한 편집 요약이며, 유물 정보·이미지의 출처는 국립중앙박물관입니다.
       </p>
-      <TimelineView eras={data} />
+      <TimelineView eras={data} scenes={scenes} />
     </main>
   );
 }
