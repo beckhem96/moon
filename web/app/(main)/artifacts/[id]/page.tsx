@@ -4,6 +4,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { artifactRepository } from "@/src/catalog/repository";
 import { posterOf } from "@/src/catalog/schema";
+import { getRelated } from "@/src/catalog/related";
 import ArtifactViewer from "@/src/experience/ArtifactViewer";
 import DocentChat from "@/src/docent/DocentChat";
 import TourismSection from "@/src/tourism/TourismSection";
@@ -148,6 +149,44 @@ export default async function ArtifactPage({
           <div className="mt-8">
             <TourismSection site={site} />
           </div>
+        ) : null;
+      })()}
+
+      {(() => {
+        const related = getRelated(artifact.id);
+        return related.length > 0 ? (
+          <section className="mt-10">
+            <h2 className="text-lg font-semibold">
+              비슷한 유물 <span className="text-xs font-normal text-neutral-500">· AI 의미 임베딩 추천</span>
+            </h2>
+            <ul className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+              {related.map((r) => (
+                <li key={r.id}>
+                  <Link
+                    href={`/artifacts/${r.id}`}
+                    className="group block overflow-hidden rounded-xl border border-neutral-200 transition hover:border-neutral-400 hover:shadow-md"
+                  >
+                    <div className="relative aspect-square bg-neutral-900">
+                      <span
+                        className={`absolute left-1 top-1 z-10 rounded px-1 py-0.5 text-[9px] font-semibold ${
+                          r.mediaKind === "model" ? "bg-sky-700 text-white" : "bg-white/90 text-neutral-700"
+                        }`}
+                      >
+                        {r.mediaKind === "model" ? "3D" : "이미지"}
+                      </span>
+                      {r.posterPath && (
+                        <Image src={r.posterPath} alt={r.title} fill sizes="(max-width:640px) 33vw, 16vw" className="object-cover transition group-hover:scale-105" />
+                      )}
+                    </div>
+                    <div className="p-2">
+                      <p className="truncate text-xs font-medium">{r.title}</p>
+                      <p className="mt-0.5 text-[11px] text-neutral-500">{r.era} · {r.category}</p>
+                    </div>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
         ) : null;
       })()}
 

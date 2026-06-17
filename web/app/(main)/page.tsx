@@ -29,7 +29,7 @@ export default function Home() {
           국립중앙박물관이 개방한 3D 원천데이터를 웹에서 바로 체험할 수 있게 다듬었습니다.
           시공간 제약 없는 한국 문화유산 탐방. (가칭 moon)
         </p>
-        <div className="mt-7 flex justify-center gap-3">
+        <div className="mt-7 flex flex-wrap justify-center gap-3">
           <Link
             href="/artifacts"
             className="rounded-xl bg-neutral-900 px-5 py-3 text-sm font-medium text-white transition hover:bg-neutral-700"
@@ -37,10 +37,10 @@ export default function Home() {
             유물 카탈로그 보기
           </Link>
           <Link
-            href="/timeline"
+            href="/story"
             className="rounded-xl border border-neutral-300 px-5 py-3 text-sm font-medium transition hover:border-neutral-500"
           >
-            시대 타임라인
+            역사 이야기
           </Link>
           <Link
             href="/exhibition"
@@ -48,6 +48,11 @@ export default function Home() {
           >
             가상 전시관 둘러보기
           </Link>
+        </div>
+        <div className="mt-3 flex flex-wrap justify-center gap-x-4 gap-y-1 text-sm text-neutral-500">
+          <Link href="/timeline" className="hover:text-neutral-900 hover:underline">시대 타임라인</Link>
+          <Link href="/search" className="hover:text-neutral-900 hover:underline">의미 검색(AI)</Link>
+          <Link href="/quiz" className="hover:text-neutral-900 hover:underline">유물 퀴즈</Link>
         </div>
         <p className="mt-5 text-xs text-neutral-500">
           유물 {artifacts.length}점(3D {models.length} · 이미지 {artifacts.length - models.length})

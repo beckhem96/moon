@@ -22,6 +22,9 @@
 | 시대 타임라인 | `Timeline` | 시대(`Era`)를 연대순으로 배열하고 시대 배경(편집 요약)과 유물을 함께 보여주는 탐색 화면 | Experience |
 | 쓰임새 | `Usage` | 유물이 실제로 어떻게 쓰였는지(기능). 대표 유물에 부여되어 생활 장면·상세·도슨트에서 노출 | Catalog |
 | 생활 장면 | `EraScene` | 양식화 배경 위에 실제 유물을 배치하고 클릭 시 쓰임새를 보여주는 시대별 인터랙티브 화면 | Experience |
+| 역사 이야기 | `Story` | 스크롤에 따라 sticky 무대(3D/이미지)가 전환되는 스크롤리텔링 챕터(`content/stories.json`) | Experience |
+| 의미 임베딩 | `Embedding` | 유물 텍스트의 벡터 표현(transformers.js, 온디바이스). 의미 검색·비슷한 유물·퀴즈 출제 기반 | Catalog |
+| 유물 퀴즈 | `Quiz` | 메타데이터+임베딩으로 생성한 문항 게임(`/quiz`) | Experience |
 | 재질 | `Material` | 유물 재질 분류 (금속·토제·도자기·석·목·지류 등) | Catalog |
 | 연고지 | `HeritageSite` | 유물과 지리적 연고가 있는 장소 (출토지·원소재지·소장처 위치) + 좌표 | Tourism |
 | 관광정보 | `TourismInfo` | 연고지 주변 관광지·시설 정보 (TourAPI 유래) | Tourism |

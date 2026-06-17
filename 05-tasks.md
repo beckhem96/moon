@@ -119,6 +119,16 @@
 
 ## 일일 체크인 로그
 
+### 6/17(화) 추가 — 역사 스토리텔링 + 멀티모달 AI (사용자 요청·서치)
+- 요청: 스토리 있는 역사를 인터랙티브하게 + 프롬프트 외 AI 추가(서치 후 결정). 채택: 큐레이션 스크롤리텔링 / 의미검색+비슷한유물(임베딩) / AI 생성 이미지 / 퀴즈
+- **임베딩**(`@huggingface/transformers`, Xenova multilingual-e5-small, 온디바이스·키 불필요): `embed-artifacts.mjs`로 208점 사전계산 → `similar.json`(비슷한 유물, 상세) + `embeddings.json`/`topics.json`(의미 검색)
+- **의미 검색** `/search`: 주제 칩(사전 임베딩 즉시) + 자유 입력(브라우저 모델 지연 로드, 서버 미전송, 키워드 폴백)
+- **역사 이야기** `/story`: `stories.json` 3챕터 + `StoryView`(IntersectionObserver sticky 무대, 스크롤 시 3D/이미지 전환). 플래그십 "흙에서 불로 — 그릇 1만 년"
+- **퀴즈** `/quiz`: `build-quiz.mjs`(메타+임베딩) 32문항(시대·이름·비슷한유물) + `QuizGame` 라운드제
+- **AI 생성 이미지**: 인프라 완료(`public/scenes/`, "AI 생성 재현" 라벨, 포스터 폴백) — ⚠️ 생성은 **HF 토큰 필요**(ZeroGPU 무료 쿼터 소진)로 보류
+- 네비·홈 CTA·문서(00·02·03·05·06·07·README) 동기화. 검증: build · lint 0 error · WCAG AA · 콘솔 0건
+- 직전 작업 커밋 `fc8c69b`
+
 ### 6/17(화) — 시대별 "유물 쓰임새" 생활 장면 (사용자 요청)
 - 요청: 각 시대 유물이 어떻게 쓰였는지 알 수 있게, 사용하는 장면·인터랙티브 기능. 결정: **양식화 SVG 배경 + 실제 유물 배치·클릭**, 시대별 대표 중심
 - 구현: `schema` `usage` 필드 + `apply-usage.mjs`로 대표 유물 **28점 쓰임새** 기입 · `era-scenes.json`(9시대 장면 레이아웃) · `EraScene`+`backdrops`(SVG 4종: 선사·왕실·사찰·공방) · 타임라인 시대 펼침 시 "이렇게 썼어요" 장면 노출
