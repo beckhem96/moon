@@ -119,6 +119,11 @@
 
 ## 일일 체크인 로그
 
+### 6/17(화) 추가 2 — 역사 이야기 챕터 4종 확장 (사용자 요청)
+- 보유 3D 유물로 스토리 4챕터 추가(총 7): 부처의 얼굴(불교 조각)·푸른 빛의 정원(고려 청자)·비움의 미학(조선 백자)·유물에 새겨진 글자(명문). 모두 실존 3D 유물 5스텝 구성
+- `gen-scenes.mjs`에 표지 4종 추가(skip-existing) → HF FLUX.1-schnell로 "AI 생성 재현" 표지 생성(.env.local 토큰)
+- 검증: build(357 SSG·7챕터) · lint 0 error · WCAG AA 0 위반(스토리 챕터 포함) · 콘솔 0건
+
 ### 6/17(화) 추가 — 역사 스토리텔링 + 멀티모달 AI (사용자 요청·서치)
 - 요청: 스토리 있는 역사를 인터랙티브하게 + 프롬프트 외 AI 추가(서치 후 결정). 채택: 큐레이션 스크롤리텔링 / 의미검색+비슷한유물(임베딩) / AI 생성 이미지 / 퀴즈
 - **임베딩**(`@huggingface/transformers`, Xenova multilingual-e5-small, 온디바이스·키 불필요): `embed-artifacts.mjs`로 208점 사전계산 → `similar.json`(비슷한 유물, 상세) + `embeddings.json`/`topics.json`(의미 검색)

@@ -9,7 +9,8 @@
     "lint": "eslint",
     "validate": "tsx scripts/validate-content.ts",
     "prebuild": "npm run validate",
-    "pipeline": "node scripts/pipeline/run.mjs"
+    "pipeline": "node scripts/pipeline/run.mjs",
+    "scenes": "node --env-file=.env.local scripts/ai/gen-scenes.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.104.1",

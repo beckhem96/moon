@@ -16,5 +16,29 @@
     "prompt": "Prehistoric Korean people crafting stone and bronze tools, a hunting scene at dawn in a wild valley, painterly atmospheric historical reconstruction illustration, traditional Korean landscape, soft cinematic light, muted earthy palette, highly detailed, no text, no letters, no watermark",
     "model": "black-forest-labs/FLUX.1-schnell",
     "note": "AI 생성 재현 이미지"
+  },
+  {
+    "key": "story-buddha",
+    "prompt": "Serene ancient Korean Buddhist temple hall interior, golden statue silhouettes, candlelight and drifting incense smoke, reverent quiet atmosphere, painterly atmospheric historical reconstruction illustration, traditional Korean landscape, soft cinematic light, muted earthy palette, highly detailed, no text, no letters, no watermark",
+    "model": "black-forest-labs/FLUX.1-schnell",
+    "note": "AI 생성 재현 이미지"
+  },
+  {
+    "key": "story-celadon",
+    "prompt": "Goryeo dynasty Korean celadon pottery workshop, shelves of jade-green glazed vessels, soft daylight through paper windows, refined elegant mood, painterly atmospheric historical reconstruction illustration, traditional Korean landscape, soft cinematic light, muted earthy palette, highly detailed, no text, no letters, no watermark",
+    "model": "black-forest-labs/FLUX.1-schnell",
+    "note": "AI 생성 재현 이미지"
+  },
+  {
+    "key": "story-baekja",
+    "prompt": "Joseon dynasty Korean scholar's room, a single white porcelain moon jar on a wooden floor, minimal serene space, soft morning light, painterly atmospheric historical reconstruction illustration, traditional Korean landscape, soft cinematic light, muted earthy palette, highly detailed, no text, no letters, no watermark",
+    "model": "black-forest-labs/FLUX.1-schnell",
+    "note": "AI 생성 재현 이미지"
+  },
+  {
+    "key": "story-inscribed",
+    "prompt": "A Joseon scholar studying ancient bronze and celadon artifacts engraved with old characters, by warm candlelight, scholarly contemplative mood, painterly atmospheric historical reconstruction illustration, traditional Korean landscape, soft cinematic light, muted earthy palette, highly detailed, no text, no letters, no watermark",
+    "model": "black-forest-labs/FLUX.1-schnell",
+    "note": "AI 생성 재현 이미지"
   }
 ]

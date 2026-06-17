@@ -20,6 +20,10 @@ const SCENES = [
   { key: "story-clay", prompt: "Ancient Korean Neolithic riverside village, people shaping clay pottery beside a fire at warm dawn" },
   { key: "story-silla", prompt: "Ancient Korean Silla kingdom golden age, great royal burial mounds under golden dusk light, regal mood" },
   { key: "story-tools", prompt: "Prehistoric Korean people crafting stone and bronze tools, a hunting scene at dawn in a wild valley" },
+  { key: "story-buddha", prompt: "Serene ancient Korean Buddhist temple hall interior, golden statue silhouettes, candlelight and drifting incense smoke, reverent quiet atmosphere" },
+  { key: "story-celadon", prompt: "Goryeo dynasty Korean celadon pottery workshop, shelves of jade-green glazed vessels, soft daylight through paper windows, refined elegant mood" },
+  { key: "story-baekja", prompt: "Joseon dynasty Korean scholar's room, a single white porcelain moon jar on a wooden floor, minimal serene space, soft morning light" },
+  { key: "story-inscribed", prompt: "A Joseon scholar studying ancient bronze and celadon artifacts engraved with old characters, by warm candlelight, scholarly contemplative mood" },
 ];
 
 async function gen(prompt) {
@@ -43,7 +47,13 @@ async function gen(prompt) {
   throw new Error("재시도 초과");
 }
 
+const force = process.argv.includes("--force");
 for (const s of SCENES) {
+  const dest = path.join(OUT, `${s.key}.jpg`);
+  if (!force && fs.existsSync(dest)) {
+    console.log(`건너뜀(이미 있음): ${s.key}`);
+    continue;
+  }
   console.log(`생성: ${s.key} …`);
   const buf = await gen(s.prompt);
   const out = await sharp(buf).resize(1248, 832, { fit: "cover" }).jpeg({ quality: 82 }).toBuffer();
