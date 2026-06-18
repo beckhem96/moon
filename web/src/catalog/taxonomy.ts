@@ -34,6 +34,21 @@ export const CATEGORY_ORDER = [
 
 export type Category = (typeof CATEGORY_ORDER)[number];
 
+/** 분류 → URL 슬러그 (가상 전시관 방 라우트 /exhibition/<slug>) */
+export const CATEGORY_SLUG: Record<string, string> = {
+  "석기": "stone",
+  "토기·도기": "pottery",
+  "청동기": "bronze",
+  "금속공예·장신구": "metal",
+  "불교조각": "buddhist",
+  "도자기": "ceramics",
+  "기타": "etc",
+};
+
+export function slugToCategory(slug: string): string | null {
+  return Object.entries(CATEGORY_SLUG).find(([, s]) => s === slug)?.[0] ?? null;
+}
+
 const NOT_FOUND = 999;
 
 /** 미상·미등록 시대는 목록 끝으로 */

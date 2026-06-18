@@ -29,7 +29,7 @@
 | 연고지 | `HeritageSite` | 유물과 지리적 연고가 있는 장소 (출토지·원소재지·소장처 위치) + 좌표 | Tourism |
 | 관광정보 | `TourismInfo` | 연고지 주변 관광지·시설 정보 (TourAPI 유래) | Tourism |
 | 가상 전시관 | `Exhibition` | 유물을 3D 공간에 배치한 가상 공간. 키보드 1인칭 보행으로 관람 | Experience |
-| 전시 구역 | `ExhibitionZone` | 한 분류(`Category`)의 유물이 모인 전시실 구역. 표지·바닥 음영으로 구분 | Experience |
+| 전시실(방) | `ExhibitionRoom` | 한 분류(`Category`)의 대표 유물을 **실제 크기**로 전시하는 개별 입장 방. 로비에서 선택 입장 | Experience |
 | 전시 배치 | `Placement` | 전시관 내 유물의 위치·회전·크기 (구역·분류 체계에서 자동 생성) | Experience |
 | 도슨트 세션 | `DocentSession` | 특정 유물 맥락의 대화형 해설 세션 (클라이언트 보관, 서버 무상태) | Docent |
 | 해설 | `Narration` | 도슨트가 생성한 설명 텍스트 (스트리밍) | Docent |
