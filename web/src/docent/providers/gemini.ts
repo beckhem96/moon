@@ -44,7 +44,7 @@ export const geminiProvider: DocentProvider = {
                 },
                 contents,
                 generationConfig: {
-                  maxOutputTokens: 400,
+                  maxOutputTokens: 2048,
                   temperature: 0.2,
                 },
               }),
