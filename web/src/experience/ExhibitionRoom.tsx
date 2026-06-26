@@ -190,7 +190,7 @@ function Rig({ room, touch, onNearest }: { room: Room; touch: React.RefObject<To
 
     // 시선 방향을 반영하되 평면(y=0) 기준 전진 방향 계산
     const fwdPlanar = new THREE.Vector3(Math.sin(yaw.current), 0, Math.cos(yaw.current));
-    const right = new THREE.Vector3(Math.cos(yaw.current), 0, -Math.sin(yaw.current));
+    const right = new THREE.Vector3(-Math.cos(yaw.current), 0, Math.sin(yaw.current));
     const move = (on("forward") ? 1 : 0) - (on("back") ? 1 : 0);
     const strafe = (on("strafeRight") ? 1 : 0) - (on("strafeLeft") ? 1 : 0);
 

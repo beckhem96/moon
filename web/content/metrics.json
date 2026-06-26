@@ -379,12 +379,12 @@
   },
   "nmk-2552": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 117.77,
+    "sourceSizeMB": 7.56,
     "publishedSizeMB": 0.53,
-    "reductionPct": 99.5,
+    "reductionPct": 93,
     "triangles": 47084,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-896": {
     "sourceFormat": "OBJ",

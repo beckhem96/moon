@@ -2,5 +2,6 @@
   "gold-cap": ["--roty", "35"],
   "celadon-pomegranate-ewer": ["--no-zup"],
   "bronze-vajra-bell": ["--no-zup"],
-  "dagger-hilt-bronze": ["--no-zup"]
+  "dagger-hilt-bronze": ["--no-zup"],
+  "nmk-2552": ["--no-zup"]
 }
