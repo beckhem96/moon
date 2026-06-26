@@ -106,37 +106,80 @@ function RoomShell({ room }: { room: Room }) {
   const length = bounds.maxZ - bounds.minZ + 4;
   return (
     <group>
+      {/* 바닥 - 고급스러운 어두운 콘크리트/석재 느낌 */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, centerZ]}>
         <planeGeometry args={[WALL_X * 2, length]} />
-        <meshStandardMaterial color="#39322b" roughness={0.75} />
+        <meshStandardMaterial color="#18181b" roughness={0.6} metalness={0.1} />
       </mesh>
       {/* 1m 격자 — 실제 크기 가늠 */}
-      <gridHelper args={[Math.ceil(Math.max(WALL_X * 2, length)), Math.ceil(Math.max(WALL_X * 2, length)), "#5a5048", "#3a322c"]} position={[0, 0.02, centerZ]} />
+      <gridHelper args={[Math.ceil(Math.max(WALL_X * 2, length)), Math.ceil(Math.max(WALL_X * 2, length)), "#3f3f46", "#27272a"]} position={[0, 0.02, centerZ]} />
       {[-1, 1].map((s) => (
         <mesh key={s} position={[s * WALL_X, WALL_H / 2, centerZ]} rotation={[0, (-s * Math.PI) / 2, 0]}>
           <planeGeometry args={[length, WALL_H]} />
-          <meshStandardMaterial color="#16130f" roughness={1} side={THREE.DoubleSide} />
+          <meshStandardMaterial color="#09090b" roughness={0.9} side={THREE.DoubleSide} />
         </mesh>
       ))}
+      {/* 천장 - 어둠 속으로 소실되는 박물관 천정 */}
       <mesh rotation={[Math.PI / 2, 0, 0]} position={[0, WALL_H, centerZ]}>
         <planeGeometry args={[WALL_X * 2, length]} />
-        <meshStandardMaterial color="#0c0a09" roughness={1} side={THREE.DoubleSide} />
+        <meshStandardMaterial color="#020202" roughness={1} side={THREE.DoubleSide} />
       </mesh>
+      {/* 전방 벽 */}
       <mesh position={[0, WALL_H / 2, bounds.maxZ + 2]}>
         <planeGeometry args={[WALL_X * 2, WALL_H]} />
-        <meshStandardMaterial color="#1c1917" roughness={1} />
+        <meshStandardMaterial color="#09090b" roughness={0.9} />
       </mesh>
     </group>
   );
 }
 
 function Rig({ room, touch, onNearest }: { room: Room; touch: React.RefObject<TouchInput>; onNearest: (id: string | null) => void }) {
-  const { camera } = useThree();
+  const { camera, gl } = useThree();
   const [, getKeys] = useKeyboardControls();
   const pos = useRef(new THREE.Vector3(...room.spawn.position));
   const yaw = useRef(room.spawn.yaw);
+  const pitch = useRef(0);
   const lastNearest = useRef<string | null>(null);
   const eyeY = room.spawn.position[1];
+
+  const isDragging = useRef(false);
+  const prevX = useRef(0);
+  const prevY = useRef(0);
+
+  useEffect(() => {
+    const el = gl.domElement;
+    const handleDown = (e: PointerEvent) => {
+      isDragging.current = true;
+      prevX.current = e.clientX;
+      prevY.current = e.clientY;
+      el.style.cursor = "grabbing";
+    };
+    const handleMove = (e: PointerEvent) => {
+      if (!isDragging.current) return;
+      const dx = e.clientX - prevX.current;
+      const dy = e.clientY - prevY.current;
+      prevX.current = e.clientX;
+      prevY.current = e.clientY;
+
+      const sens = 0.0035; // 마우스 시선 감도
+      yaw.current -= dx * sens;
+      pitch.current = THREE.MathUtils.clamp(pitch.current - dy * sens, -Math.PI / 3.5, Math.PI / 3.5);
+    };
+    const handleUp = () => {
+      isDragging.current = false;
+      el.style.cursor = "auto";
+    };
+
+    el.addEventListener("pointerdown", handleDown);
+    window.addEventListener("pointermove", handleMove);
+    window.addEventListener("pointerup", handleUp);
+
+    return () => {
+      el.removeEventListener("pointerdown", handleDown);
+      window.removeEventListener("pointermove", handleMove);
+      window.removeEventListener("pointerup", handleUp);
+    };
+  }, [gl]);
 
   useFrame((_, dtRaw) => {
     const dt = Math.min(dtRaw, 0.05);
@@ -144,17 +187,29 @@ function Rig({ room, touch, onNearest }: { room: Room; touch: React.RefObject<To
     const t = touch.current;
     const on = (key: MoveKey) => k[key] || t[key];
     yaw.current += ((on("turnRight") ? 1 : 0) - (on("turnLeft") ? 1 : 0)) * TURN_SPEED * dt;
-    const fwd = new THREE.Vector3(Math.sin(yaw.current), 0, Math.cos(yaw.current));
+
+    // 시선 방향을 반영하되 평면(y=0) 기준 전진 방향 계산
+    const fwdPlanar = new THREE.Vector3(Math.sin(yaw.current), 0, Math.cos(yaw.current));
     const right = new THREE.Vector3(Math.cos(yaw.current), 0, -Math.sin(yaw.current));
     const move = (on("forward") ? 1 : 0) - (on("back") ? 1 : 0);
     const strafe = (on("strafeRight") ? 1 : 0) - (on("strafeLeft") ? 1 : 0);
-    pos.current.addScaledVector(fwd, move * MOVE_SPEED * dt);
+
+    pos.current.addScaledVector(fwdPlanar, move * MOVE_SPEED * dt);
     pos.current.addScaledVector(right, strafe * MOVE_SPEED * dt);
+
     const b = room.bounds;
     pos.current.x = THREE.MathUtils.clamp(pos.current.x, b.minX, b.maxX);
     pos.current.z = THREE.MathUtils.clamp(pos.current.z, b.minZ, b.maxZ);
+
     camera.position.set(pos.current.x, eyeY, pos.current.z);
-    camera.lookAt(pos.current.x + fwd.x, eyeY, pos.current.z + fwd.z);
+
+    // Yaw(좌우)와 Pitch(상하)를 모두 반영한 3차원 시선 벡터 계산
+    const lookDir = new THREE.Vector3(
+      Math.sin(yaw.current) * Math.cos(pitch.current),
+      Math.sin(pitch.current),
+      Math.cos(yaw.current) * Math.cos(pitch.current)
+    );
+    camera.lookAt(pos.current.x + lookDir.x, eyeY + lookDir.y, pos.current.z + lookDir.z);
 
     let nearestId: string | null = null;
     let best = NEAR_DIST;
@@ -167,12 +222,28 @@ function Rig({ room, touch, onNearest }: { room: Room; touch: React.RefObject<To
   return null;
 }
 
-function Loader() {
+function ExhibitionRoomLoader() {
   const { progress } = useProgress();
+  const [show, setShow] = useState(true);
+
+  useEffect(() => {
+    if (progress >= 100) {
+      const timer = setTimeout(() => setShow(false), 200);
+      return () => clearTimeout(timer);
+    } else {
+      setShow(true);
+    }
+  }, [progress]);
+
+  if (!show) return null;
+
   return (
-    <Html center>
-      <div className="rounded-lg bg-black/70 px-4 py-2 text-sm text-white tabular-nums">전시실 불러오는 중… {Math.round(progress)}%</div>
-    </Html>
+    <div className="absolute inset-0 z-30 flex flex-col gap-3.5 items-center justify-center bg-neutral-950/95 text-sm text-white font-medium tabular-nums backdrop-blur-md">
+      <div className="h-1 w-40 rounded-full bg-neutral-800 overflow-hidden">
+        <div className="h-full bg-sky-500 transition-all duration-200" style={{ width: `${progress}%` }}></div>
+      </div>
+      <span className="text-xs text-neutral-400 select-none">전시실 공간을 구성하는 중… {Math.round(progress)}%</span>
+    </div>
   );
 }
 
@@ -243,16 +314,17 @@ export default function ExhibitionRoom({ room }: { room: Room }) {
   }
 
   return (
-    <div className="relative h-[70vh] overflow-hidden rounded-2xl bg-neutral-800">
+    <div className="relative h-[70vh] overflow-hidden rounded-2xl bg-neutral-950">
+      <ExhibitionRoomLoader />
       <KeyboardControls map={KEY_MAP}>
         <Canvas dpr={[1, 1.5]} camera={{ fov: 60, near: 0.1, far: 100, position: room.spawn.position }}>
-          <color attach="background" args={["#0f0d0b"]} />
-          <fog attach="fog" args={["#0f0d0b", 16, 40]} />
-          <ambientLight intensity={0.85} />
-          <hemisphereLight args={["#e6eeff", "#26201a", 0.7]} />
-          <directionalLight position={[4, 8, 5]} intensity={2.2} />
-          <directionalLight position={[-5, 6, -3]} intensity={0.9} />
-          <Suspense fallback={<Loader />}>
+          <color attach="background" args={["#09090b"]} />
+          <fog attach="fog" args={["#09090b", 16, 40]} />
+          <ambientLight intensity={0.45} />
+          <hemisphereLight args={["#e2e8f0", "#09090b", 0.5]} />
+          <directionalLight position={[4, 8, 5]} intensity={2.5} />
+          <directionalLight position={[-5, 6, -3]} intensity={1.2} />
+          <Suspense fallback={null}>
             <RoomShell room={room} />
             <ScaleHuman x={1.8} z={room.spawn.position[2] + 3} />
             {room.placements.map((p) => (
@@ -263,8 +335,8 @@ export default function ExhibitionRoom({ room }: { room: Room }) {
         </Canvas>
       </KeyboardControls>
 
-      <div className="pointer-events-none absolute left-3 top-3 rounded-lg bg-black/55 px-3 py-1.5 text-[11px] leading-relaxed text-white">
-        <b>{room.category}</b> · 이동 <b>WASD·↑↓</b> · 회전 <b>←→·QE</b> · 관람 <b>Enter/클릭</b>
+      <div className="pointer-events-none absolute left-3 top-3 rounded-lg bg-black/70 px-3 py-2 text-[11px] leading-relaxed text-white">
+        <b>이동</b>: W·A·S·D / ↑·↓·←·→ | <b>회전</b>: 마우스 드래그 / Q·E | <b>관람</b>: Enter / 클릭
       </div>
       {nearestTitle && (
         <div className="pointer-events-none absolute inset-x-0 top-3 flex justify-center">

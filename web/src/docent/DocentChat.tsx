@@ -70,45 +70,75 @@ export default function DocentChat({
   }
 
   return (
-    <section aria-label="AI 도슨트" className="rounded-xl border border-neutral-200">
-      <header className="flex items-baseline justify-between border-b border-neutral-100 px-4 py-3">
-        <h2 className="font-semibold">AI 도슨트에게 물어보기</h2>
-        <span className="text-[11px] text-neutral-500">
-          AI 생성 답변 — 사실과 다를 수 있습니다
-        </span>
+    <section aria-label="AI 도슨트" className="rounded-xl border border-neutral-200 bg-white shadow-sm overflow-hidden">
+      <header className="flex items-center justify-between border-b border-neutral-100 px-4 py-3 bg-neutral-50/50">
+        <h2 className="font-semibold text-sm text-neutral-800 flex items-center gap-1.5">
+          <span className="h-2 w-2 rounded-full bg-sky-500 animate-pulse"></span>
+          AI 도슨트 대화
+        </h2>
+        <div className="flex items-center gap-3">
+          {messages.length > 0 && (
+            <button
+              type="button"
+              onClick={() => {
+                setMessages([]);
+                setError(null);
+              }}
+              className="text-xs text-neutral-500 hover:text-neutral-900 transition hover:underline"
+            >
+              대화 초기화
+            </button>
+          )}
+          <span className="text-[10px] text-neutral-400 select-none">
+            AI 답변 · 실시간 생성
+          </span>
+        </div>
       </header>
 
-      <div ref={logRef} aria-live="polite" className="max-h-80 space-y-3 overflow-y-auto px-4 py-3">
+      <div ref={logRef} aria-live="polite" className="max-h-80 space-y-3.5 overflow-y-auto px-4 py-4 min-h-[120px] bg-neutral-50/20">
         {messages.length === 0 && (
-          <p className="text-sm text-neutral-500">
-            아래 추천 질문을 누르거나 직접 입력해 보세요.
-          </p>
+          <div className="flex flex-col items-center justify-center h-24 text-center">
+            <p className="text-sm text-neutral-500">
+              유물에 대해 궁금한 점을 물어보세요.
+            </p>
+            <p className="text-xs text-neutral-400 mt-1">
+              아래 추천 질문을 선택하거나 직접 입력할 수 있습니다.
+            </p>
+          </div>
         )}
         {messages.map((m, i) => (
-          <div key={i} className={m.role === "user" ? "text-right" : ""}>
+          <div key={i} className={m.role === "user" ? "text-right" : "text-left"}>
             <span
               className={
                 m.role === "user"
-                  ? "inline-block max-w-[85%] rounded-2xl rounded-br-sm bg-neutral-900 px-3 py-2 text-sm text-white"
-                  : "inline-block max-w-[85%] whitespace-pre-wrap rounded-2xl rounded-bl-sm bg-neutral-100 px-3 py-2 text-sm"
+                  ? "inline-block max-w-[85%] rounded-2xl rounded-br-sm bg-neutral-900 px-3.5 py-2 text-sm text-white shadow-sm"
+                  : "inline-block max-w-[85%] whitespace-pre-wrap rounded-2xl rounded-bl-sm bg-white border border-neutral-200/80 px-3.5 py-2 text-sm text-neutral-800 shadow-sm"
               }
             >
-              {m.content || "…"}
+              {m.content || (
+                <span className="flex items-center gap-1 py-1" aria-label="답변을 작성하는 중">
+                  <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-neutral-400 [animation-delay:-0.3s]"></span>
+                  <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-neutral-400 [animation-delay:-0.15s]"></span>
+                  <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-neutral-400"></span>
+                </span>
+              )}
             </span>
           </div>
         ))}
-        {error && <p className="text-sm text-red-500">{error}</p>}
+        {error && <p className="text-xs text-red-500 bg-red-50 border border-red-100 rounded-lg p-2.5">{error}</p>}
       </div>
 
-      <div className="border-t border-neutral-100 p-3">
-        {messages.length === 0 && (
-          <div className="mb-2 flex flex-wrap gap-1.5">
+      <div className="border-t border-neutral-100 p-3 bg-white">
+        {suggestedQuestions.length > 0 && !capReached && (
+          <div className="mb-3 flex flex-wrap gap-1.5 items-center">
+            <span className="text-[10px] font-medium text-neutral-400 select-none">추천 질문:</span>
             {suggestedQuestions.map((q) => (
               <button
                 key={q}
                 type="button"
                 onClick={() => send(q)}
-                className="rounded-full border border-neutral-300 px-3 py-1 text-xs text-neutral-600 transition hover:border-neutral-500 hover:text-neutral-900"
+                disabled={streaming}
+                className="rounded-full border border-neutral-200 bg-neutral-50 px-2.5 py-1 text-xs text-neutral-600 transition hover:border-neutral-400 hover:text-neutral-900 disabled:opacity-50"
               >
                 {q}
               </button>
@@ -127,17 +157,17 @@ export default function DocentChat({
             onChange={(e) => setInput(e.target.value)}
             disabled={streaming || capReached}
             placeholder={
-              capReached ? "이 유물에 대한 질문 한도에 도달했어요" : "유물에 대해 궁금한 점을 물어보세요"
+              capReached ? "이 유물에 대한 질문 한도(10회)에 도달했어요" : "질문을 자유롭게 입력해보세요"
             }
             aria-label="도슨트에게 질문 입력"
-            className="flex-1 rounded-lg border border-neutral-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-400 disabled:bg-neutral-50"
+            className="flex-1 rounded-lg border border-neutral-300 px-3.5 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-400 disabled:bg-neutral-50"
           />
           <button
             type="submit"
             disabled={streaming || capReached || !input.trim()}
             className="rounded-lg bg-neutral-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-neutral-700 disabled:opacity-40"
           >
-            {streaming ? "답변 중…" : "질문"}
+            {streaming ? "답변 중" : "전송"}
           </button>
         </form>
       </div>

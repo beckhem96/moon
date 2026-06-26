@@ -1,6 +1,7 @@
 import type { DocentProvider } from "./provider";
 import { mockProvider } from "./providers/mock";
 import { anthropicProvider } from "./providers/anthropic";
+import { geminiProvider } from "./providers/gemini";
 
 /**
  * 헌법 §6-3: 제공자 선택은 환경변수로, 기본은 mock — 키가 없어도 서비스는 동작한다.
@@ -12,7 +13,8 @@ export function getDocentProvider(): DocentProvider {
   switch (name) {
     case "anthropic":
       return anthropicProvider;
-    // case "gemini": return geminiProvider;  // U-04에서 Gemini 선택 시 추가
+    case "gemini":
+      return geminiProvider;
     case "mock":
     default:
       return mockProvider;

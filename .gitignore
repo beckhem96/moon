@@ -11,3 +11,5 @@ assets/work/
 node_modules/
 .next/
 .vercel/
+*.docx
+venv/

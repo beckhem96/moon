@@ -39,7 +39,10 @@ npm run build && npm run start   # http://localhost:3000
 ```
 
 외부 API(도슨트·관광)는 `web/.env.local`의 키가 필요합니다. 키가 없으면 도슨트는 mock,
-관광은 스냅숏으로 동작합니다. 에셋 파이프라인은 `cd web && npm run pipeline -- <slug>`.
+관광은 스냅숏으로 동작합니다. 
+- **AI 도슨트**: `DOCENT_PROVIDER=gemini` 및 `DOCENT_API_KEY`를 설정하여 Google Gemini 2.5 Flash 기반의 실시간 해설을 활성화할 수 있습니다.
+- **가상 전시관 조작**: 마우스 드래그를 통해 고개를 상하좌우(Yaw/Pitch)로 돌려볼 수 있어 더욱 자연스럽게 전시관을 둘러볼 수 있습니다.
+에셋 파이프라인은 `cd web && npm run pipeline -- <slug>`.
 
 ## 문서 (SDD × DDD)
 
