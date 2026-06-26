@@ -105,7 +105,7 @@ const sourceSizeMB = mb(sourceFiles.reduce((s, f) => s + fs.statSync(f).size, 0)
 // ② 최종 출력 상한(texsize)으로 선리사이즈 — 8K 원본이 obj2gltf 메모리 가드(maxMemoryUsage)에
 //    걸려 텍스처가 통째로 무시되는 문제 방지 + 변환 속도 개선
 for (const tex of walk(objDir, (f) => /\.(jpe?g|png)$/i.test(f))) {
-  const base = sharp(tex).resize(texsize, texsize, { fit: "inside", withoutEnlargement: true });
+  const base = sharp(tex, { limitInputPixels: false }).resize(texsize, texsize, { fit: "inside", withoutEnlargement: true });
   const buf = /\.png$/i.test(tex)
     ? await base.png().toBuffer()
     : await base.jpeg({ quality: 95 }).toBuffer();

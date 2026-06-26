@@ -73,12 +73,12 @@
   },
   "gold-buckle-seokamri": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 119.43,
-    "publishedSizeMB": 1.6,
-    "reductionPct": 98.7,
+    "sourceSizeMB": 28.69,
+    "publishedSizeMB": 1.59,
+    "reductionPct": 94.5,
     "triangles": 155652,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-13"
+    "processedAt": "2026-06-26"
   },
   "iron-buddha": {
     "sourceFormat": "OBJ",
@@ -123,34 +123,34 @@
     "reductionPct": 87.2,
     "triangles": 62811,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-12"
+    "processedAt": "2026-06-26"
   },
   "nmk-141452": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 60.32,
+    "sourceSizeMB": 10.21,
     "publishedSizeMB": 0.38,
-    "reductionPct": 99.4,
+    "reductionPct": 96.3,
     "triangles": 47780,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-4262": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 39.25,
-    "publishedSizeMB": 0.54,
-    "reductionPct": 98.6,
+    "sourceSizeMB": 4.25,
+    "publishedSizeMB": 0.53,
+    "reductionPct": 87.5,
     "triangles": 35560,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-36551575": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 63.05,
-    "publishedSizeMB": 1.08,
-    "reductionPct": 98.3,
+    "sourceSizeMB": 16.09,
+    "publishedSizeMB": 1.07,
+    "reductionPct": 93.3,
     "triangles": 193466,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-36548992": {
     "sourceFormat": "OBJ",
@@ -172,30 +172,30 @@
   },
   "nmk-36549740": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 75.19,
-    "publishedSizeMB": 1.39,
-    "reductionPct": 98.2,
+    "sourceSizeMB": 18.56,
+    "publishedSizeMB": 1.37,
+    "reductionPct": 92.6,
     "triangles": 128651,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-618": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 63.2,
+    "sourceSizeMB": 17.14,
     "publishedSizeMB": 0.91,
-    "reductionPct": 98.6,
+    "reductionPct": 94.7,
     "triangles": 211522,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-35820012": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 81.17,
-    "publishedSizeMB": 1.05,
-    "reductionPct": 98.7,
+    "sourceSizeMB": 23.54,
+    "publishedSizeMB": 1.04,
+    "reductionPct": 95.6,
     "triangles": 207228,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-957": {
     "sourceFormat": "OBJ",
@@ -208,30 +208,30 @@
   },
   "nmk-6952": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 54.01,
-    "publishedSizeMB": 1,
-    "reductionPct": 98.1,
+    "sourceSizeMB": 18.64,
+    "publishedSizeMB": 0.99,
+    "reductionPct": 94.7,
     "triangles": 162349,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-4220": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 68.44,
-    "publishedSizeMB": 1.21,
-    "reductionPct": 98.2,
+    "sourceSizeMB": 33.29,
+    "publishedSizeMB": 1.19,
+    "reductionPct": 96.4,
     "triangles": 334946,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-1126": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 42.85,
-    "publishedSizeMB": 0.61,
-    "reductionPct": 98.6,
+    "sourceSizeMB": 4.12,
+    "publishedSizeMB": 0.6,
+    "reductionPct": 85.4,
     "triangles": 22588,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-964": {
     "sourceFormat": "OBJ",
@@ -244,12 +244,12 @@
   },
   "nmk-1296": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 41.88,
-    "publishedSizeMB": 0.8,
-    "reductionPct": 98.1,
+    "sourceSizeMB": 12.17,
+    "publishedSizeMB": 0.78,
+    "reductionPct": 93.6,
     "triangles": 100240,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-1917": {
     "sourceFormat": "OBJ",
@@ -262,21 +262,21 @@
   },
   "nmk-1991": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 28.48,
-    "publishedSizeMB": 0.32,
-    "reductionPct": 98.9,
+    "sourceSizeMB": 4.25,
+    "publishedSizeMB": 0.31,
+    "reductionPct": 92.7,
     "triangles": 31942,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-1351": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 52.19,
-    "publishedSizeMB": 0.47,
-    "reductionPct": 99.1,
+    "sourceSizeMB": 6.43,
+    "publishedSizeMB": 0.46,
+    "reductionPct": 92.8,
     "triangles": 23400,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-1476": {
     "sourceFormat": "OBJ",
@@ -289,12 +289,12 @@
   },
   "nmk-17027": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 81.03,
-    "publishedSizeMB": 0.48,
-    "reductionPct": 99.4,
+    "sourceSizeMB": 4.34,
+    "publishedSizeMB": 0.47,
+    "reductionPct": 89.2,
     "triangles": 39403,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-2397": {
     "sourceFormat": "OBJ",
@@ -307,12 +307,12 @@
   },
   "nmk-2350": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 56.41,
-    "publishedSizeMB": 0.54,
-    "reductionPct": 99,
+    "sourceSizeMB": 5.27,
+    "publishedSizeMB": 0.53,
+    "reductionPct": 89.9,
     "triangles": 32284,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-29907": {
     "sourceFormat": "OBJ",
@@ -334,30 +334,30 @@
   },
   "nmk-941": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 37.6,
+    "sourceSizeMB": 3.46,
     "publishedSizeMB": 0.16,
-    "reductionPct": 99.6,
+    "reductionPct": 95.4,
     "triangles": 24608,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-2224": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 45.88,
-    "publishedSizeMB": 0.27,
-    "reductionPct": 99.4,
+    "sourceSizeMB": 3.29,
+    "publishedSizeMB": 0.26,
+    "reductionPct": 92.1,
     "triangles": 20642,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-2203": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 51.27,
+    "sourceSizeMB": 3.29,
     "publishedSizeMB": 0.28,
-    "reductionPct": 99.5,
+    "reductionPct": 91.5,
     "triangles": 20574,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-185757": {
     "sourceFormat": "OBJ",
@@ -388,12 +388,12 @@
   },
   "nmk-896": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 62.77,
-    "publishedSizeMB": 0.6,
-    "reductionPct": 99,
+    "sourceSizeMB": 6.5,
+    "publishedSizeMB": 0.59,
+    "reductionPct": 90.9,
     "triangles": 54198,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-63475": {
     "sourceFormat": "OBJ",
@@ -406,30 +406,30 @@
   },
   "nmk-1255": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 38.24,
-    "publishedSizeMB": 0.54,
-    "reductionPct": 98.6,
+    "sourceSizeMB": 9.04,
+    "publishedSizeMB": 0.53,
+    "reductionPct": 94.1,
     "triangles": 72508,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-981": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 61.4,
-    "publishedSizeMB": 0.57,
-    "reductionPct": 99.1,
+    "sourceSizeMB": 9.65,
+    "publishedSizeMB": 0.56,
+    "reductionPct": 94.2,
     "triangles": 79542,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-1248": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 54.67,
-    "publishedSizeMB": 0.63,
-    "reductionPct": 98.8,
+    "sourceSizeMB": 6.44,
+    "publishedSizeMB": 0.62,
+    "reductionPct": 90.4,
     "triangles": 43164,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-8218": {
     "sourceFormat": "OBJ",
@@ -442,39 +442,39 @@
   },
   "nmk-968": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 68.08,
-    "publishedSizeMB": 0.8,
-    "reductionPct": 98.8,
+    "sourceSizeMB": 10.41,
+    "publishedSizeMB": 0.78,
+    "reductionPct": 92.5,
     "triangles": 78364,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-1116": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 97.44,
-    "publishedSizeMB": 0.46,
-    "reductionPct": 99.5,
+    "sourceSizeMB": 16.75,
+    "publishedSizeMB": 0.45,
+    "reductionPct": 97.3,
     "triangles": 58026,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-1191": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 44.21,
-    "publishedSizeMB": 0.56,
-    "reductionPct": 98.7,
+    "sourceSizeMB": 4.71,
+    "publishedSizeMB": 0.54,
+    "reductionPct": 88.5,
     "triangles": 27762,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-6220": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 57.13,
+    "sourceSizeMB": 4.85,
     "publishedSizeMB": 0.44,
-    "reductionPct": 99.2,
+    "reductionPct": 90.9,
     "triangles": 30354,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-6210": {
     "sourceFormat": "OBJ",
@@ -487,21 +487,21 @@
   },
   "nmk-472": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 50.22,
+    "sourceSizeMB": 6.2,
     "publishedSizeMB": 0.48,
-    "reductionPct": 99,
+    "reductionPct": 92.3,
     "triangles": 44218,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-4769": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 61.28,
-    "publishedSizeMB": 0.7,
-    "reductionPct": 98.9,
+    "sourceSizeMB": 4.88,
+    "publishedSizeMB": 0.68,
+    "reductionPct": 86.1,
     "triangles": 25876,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-48738": {
     "sourceFormat": "OBJ",
@@ -523,84 +523,84 @@
   },
   "nmk-208708": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 56.49,
-    "publishedSizeMB": 0.62,
-    "reductionPct": 98.9,
+    "sourceSizeMB": 11.68,
+    "publishedSizeMB": 0.61,
+    "reductionPct": 94.8,
     "triangles": 49062,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-180304": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 27.37,
-    "publishedSizeMB": 0.4,
-    "reductionPct": 98.5,
+    "sourceSizeMB": 5.26,
+    "publishedSizeMB": 0.39,
+    "reductionPct": 92.6,
     "triangles": 37236,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-186306": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 22.09,
-    "publishedSizeMB": 0.35,
-    "reductionPct": 98.4,
+    "sourceSizeMB": 3.73,
+    "publishedSizeMB": 0.34,
+    "reductionPct": 90.9,
     "triangles": 26326,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-35863517": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 42.51,
-    "publishedSizeMB": 0.56,
-    "reductionPct": 98.7,
+    "sourceSizeMB": 4.58,
+    "publishedSizeMB": 0.54,
+    "reductionPct": 88.2,
     "triangles": 28136,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-35861817": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 29.76,
-    "publishedSizeMB": 0.52,
-    "reductionPct": 98.3,
+    "sourceSizeMB": 6.43,
+    "publishedSizeMB": 0.51,
+    "reductionPct": 92.1,
     "triangles": 45590,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-98255": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 44.86,
-    "publishedSizeMB": 0.59,
-    "reductionPct": 98.7,
+    "sourceSizeMB": 5.29,
+    "publishedSizeMB": 0.58,
+    "reductionPct": 89,
     "triangles": 29800,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-102610": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 44.08,
-    "publishedSizeMB": 0.71,
-    "reductionPct": 98.4,
+    "sourceSizeMB": 4.04,
+    "publishedSizeMB": 0.69,
+    "reductionPct": 82.9,
     "triangles": 17930,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-1213": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 26.18,
-    "publishedSizeMB": 0.33,
-    "reductionPct": 98.7,
+    "sourceSizeMB": 4.24,
+    "publishedSizeMB": 0.32,
+    "reductionPct": 92.5,
     "triangles": 28798,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-7167": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 33,
-    "publishedSizeMB": 0.49,
-    "reductionPct": 98.5,
+    "sourceSizeMB": 3.45,
+    "publishedSizeMB": 0.48,
+    "reductionPct": 86.1,
     "triangles": 17570,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-87091": {
     "sourceFormat": "OBJ",
@@ -640,12 +640,12 @@
   },
   "nmk-4219": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 26.36,
+    "sourceSizeMB": 5.76,
     "publishedSizeMB": 0.42,
-    "reductionPct": 98.4,
+    "reductionPct": 92.7,
     "triangles": 43184,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-1431": {
     "sourceFormat": "OBJ",
@@ -658,12 +658,12 @@
   },
   "nmk-1734": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 20.39,
+    "sourceSizeMB": 5.57,
     "publishedSizeMB": 0.24,
-    "reductionPct": 98.8,
+    "reductionPct": 95.7,
     "triangles": 62551,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-1096": {
     "sourceFormat": "OBJ",
@@ -766,12 +766,12 @@
   },
   "nmk-188866": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 22.66,
+    "sourceSizeMB": 6.24,
     "publishedSizeMB": 0.51,
-    "reductionPct": 97.7,
+    "reductionPct": 91.8,
     "triangles": 62846,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-1969": {
     "sourceFormat": "OBJ",
@@ -784,75 +784,75 @@
   },
   "nmk-4229": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 27.97,
+    "sourceSizeMB": 14.22,
     "publishedSizeMB": 0.43,
-    "reductionPct": 98.5,
+    "reductionPct": 97,
     "triangles": 135364,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-1226": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 34.61,
+    "sourceSizeMB": 18.95,
     "publishedSizeMB": 0.45,
-    "reductionPct": 98.7,
+    "reductionPct": 97.6,
     "triangles": 130066,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-350": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 119.13,
+    "sourceSizeMB": 83.58,
     "publishedSizeMB": 1.45,
-    "reductionPct": 98.8,
+    "reductionPct": 98.3,
     "triangles": 666512,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-4384": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 154.56,
+    "sourceSizeMB": 102.69,
     "publishedSizeMB": 3.01,
-    "reductionPct": 98.1,
+    "reductionPct": 97.1,
     "triangles": 696871,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-1484": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 35.92,
+    "sourceSizeMB": 18.53,
     "publishedSizeMB": 0.64,
-    "reductionPct": 98.2,
+    "reductionPct": 96.5,
     "triangles": 176028,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-958": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 33.21,
-    "publishedSizeMB": 0.6,
-    "reductionPct": 98.2,
+    "sourceSizeMB": 3.86,
+    "publishedSizeMB": 0.58,
+    "reductionPct": 85,
     "triangles": 18766,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-482": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 37.73,
-    "publishedSizeMB": 0.59,
-    "reductionPct": 98.4,
+    "sourceSizeMB": 4.92,
+    "publishedSizeMB": 0.58,
+    "reductionPct": 88.2,
     "triangles": 28980,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-1768": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 38.15,
+    "sourceSizeMB": 17.34,
     "publishedSizeMB": 0.52,
-    "reductionPct": 98.6,
+    "reductionPct": 97,
     "triangles": 163826,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-1515": {
     "sourceFormat": "OBJ",
@@ -865,30 +865,30 @@
   },
   "nmk-967": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 37.43,
+    "sourceSizeMB": 18.06,
     "publishedSizeMB": 0.52,
-    "reductionPct": 98.6,
+    "reductionPct": 97.1,
     "triangles": 171326,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-974": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 36.02,
+    "sourceSizeMB": 18.07,
     "publishedSizeMB": 0.46,
-    "reductionPct": 98.7,
+    "reductionPct": 97.5,
     "triangles": 172842,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-4385": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 26.71,
+    "sourceSizeMB": 17.12,
     "publishedSizeMB": 0.7,
-    "reductionPct": 97.4,
+    "reductionPct": 95.9,
     "triangles": 199024,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-1475": {
     "sourceFormat": "OBJ",
@@ -901,12 +901,12 @@
   },
   "nmk-1160": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 40.2,
+    "sourceSizeMB": 20.42,
     "publishedSizeMB": 0.71,
-    "reductionPct": 98.2,
+    "reductionPct": 96.5,
     "triangles": 191438,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-2074": {
     "sourceFormat": "OBJ",
@@ -919,12 +919,12 @@
   },
   "nmk-655": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 22.48,
-    "publishedSizeMB": 0.39,
-    "reductionPct": 98.3,
+    "sourceSizeMB": 11.53,
+    "publishedSizeMB": 0.38,
+    "reductionPct": 96.7,
     "triangles": 107100,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-1477": {
     "sourceFormat": "OBJ",
@@ -955,12 +955,12 @@
   },
   "nmk-355": {
     "sourceFormat": "OBJ",
-    "sourceSizeMB": 35.47,
+    "sourceSizeMB": 17.66,
     "publishedSizeMB": 0.48,
-    "reductionPct": 98.6,
+    "reductionPct": 97.3,
     "triangles": 167594,
     "pipelineVersion": "1.0.0",
-    "processedAt": "2026-06-16"
+    "processedAt": "2026-06-26"
   },
   "nmk-858": {
     "sourceFormat": "OBJ",
@@ -1143,12 +1143,12 @@
     "processedAt": "2026-06-16"
   },
   "nmk-706": {
-    "sourceFormat": "PLY",
-    "sourceSizeMB": 2.88,
-    "publishedSizeMB": 0.3,
-    "reductionPct": 89.6,
-    "triangles": 119998,
-    "pipelineVersion": "1.0.0-ply",
-    "processedAt": "2026-06-16"
+    "sourceFormat": "OBJ",
+    "sourceSizeMB": 58.69,
+    "publishedSizeMB": 0.48,
+    "reductionPct": 99.2,
+    "triangles": 94616,
+    "pipelineVersion": "1.0.0",
+    "processedAt": "2026-06-26"
   }
 }

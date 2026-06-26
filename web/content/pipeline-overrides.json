@@ -1,7 +1,184 @@
 {
-  "gold-cap": ["--roty", "35"],
-  "celadon-pomegranate-ewer": ["--no-zup"],
-  "bronze-vajra-bell": ["--no-zup"],
-  "dagger-hilt-bronze": ["--no-zup"],
-  "nmk-2552": ["--no-zup"]
+  "gold-cap": [
+    "--no-zup",
+    "--roty",
+    "35"
+  ],
+  "celadon-pomegranate-ewer": [
+    "--no-zup"
+  ],
+  "bronze-vajra-bell": [
+    "--no-zup"
+  ],
+  "dagger-hilt-bronze": [
+    "--no-zup"
+  ],
+  "nmk-2552": [
+    "--no-zup"
+  ],
+  "gold-buckle-seokamri": [
+    "--no-zup"
+  ],
+  "nmk-102610": [
+    "--no-zup"
+  ],
+  "nmk-1116": [
+    "--no-zup"
+  ],
+  "nmk-1126": [
+    "--no-zup"
+  ],
+  "nmk-1160": [
+    "--no-zup"
+  ],
+  "nmk-1191": [
+    "--no-zup"
+  ],
+  "nmk-1213": [
+    "--no-zup"
+  ],
+  "nmk-1226": [
+    "--no-zup"
+  ],
+  "nmk-1248": [
+    "--no-zup"
+  ],
+  "nmk-1255": [
+    "--no-zup"
+  ],
+  "nmk-1296": [
+    "--no-zup"
+  ],
+  "nmk-1351": [
+    "--no-zup"
+  ],
+  "nmk-141452": [
+    "--no-zup"
+  ],
+  "nmk-1484": [
+    "--no-zup"
+  ],
+  "nmk-17027": [
+    "--no-zup"
+  ],
+  "nmk-1734": [
+    "--no-zup"
+  ],
+  "nmk-1768": [
+    "--no-zup"
+  ],
+  "nmk-180304": [
+    "--no-zup"
+  ],
+  "nmk-186306": [
+    "--no-zup"
+  ],
+  "nmk-188866": [
+    "--no-zup"
+  ],
+  "nmk-1991": [
+    "--no-zup"
+  ],
+  "nmk-208708": [
+    "--no-zup"
+  ],
+  "nmk-2203": [
+    "--no-zup"
+  ],
+  "nmk-2224": [
+    "--no-zup"
+  ],
+  "nmk-2350": [
+    "--no-zup"
+  ],
+  "nmk-350": [
+    "--no-zup"
+  ],
+  "nmk-355": [
+    "--no-zup"
+  ],
+  "nmk-35820012": [
+    "--no-zup"
+  ],
+  "nmk-35861817": [
+    "--no-zup"
+  ],
+  "nmk-35863517": [
+    "--no-zup"
+  ],
+  "nmk-36549740": [
+    "--no-zup"
+  ],
+  "nmk-36551575": [
+    "--no-zup"
+  ],
+  "nmk-4219": [
+    "--no-zup"
+  ],
+  "nmk-4220": [
+    "--no-zup"
+  ],
+  "nmk-4229": [
+    "--no-zup"
+  ],
+  "nmk-4262": [
+    "--no-zup"
+  ],
+  "nmk-4384": [
+    "--no-zup"
+  ],
+  "nmk-4385": [
+    "--no-zup"
+  ],
+  "nmk-472": [
+    "--no-zup"
+  ],
+  "nmk-4769": [
+    "--no-zup"
+  ],
+  "nmk-482": [
+    "--no-zup"
+  ],
+  "nmk-618": [
+    "--no-zup"
+  ],
+  "nmk-6220": [
+    "--no-zup"
+  ],
+  "nmk-655": [
+    "--no-zup"
+  ],
+  "nmk-6952": [
+    "--no-zup"
+  ],
+  "nmk-706": [
+    "--no-zup"
+  ],
+  "nmk-7167": [
+    "--no-zup"
+  ],
+  "nmk-896": [
+    "--no-zup"
+  ],
+  "nmk-941": [
+    "--no-zup"
+  ],
+  "nmk-958": [
+    "--no-zup"
+  ],
+  "nmk-967": [
+    "--no-zup"
+  ],
+  "nmk-968": [
+    "--no-zup"
+  ],
+  "nmk-974": [
+    "--no-zup"
+  ],
+  "nmk-981": [
+    "--no-zup"
+  ],
+  "nmk-98255": [
+    "--no-zup"
+  ]
 }
