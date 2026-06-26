@@ -68,36 +68,83 @@ export const geminiProvider: DocentProvider = {
             if (done) break;
 
             buffer += decoder.decode(value, { stream: true });
-            const lines = buffer.split("\n");
-            buffer = lines.pop() ?? "";
+            
+            // Normalize carriage returns to standard newlines
+            const normalized = buffer.replace(/\r\n/g, "\n");
+            const events = normalized.split("\n\n");
+            
+            // Keep the last (potentially incomplete) event in the buffer
+            buffer = events.pop() ?? "";
 
-            for (const line of lines) {
-              const trimmed = line.trim();
-              if (trimmed.startsWith("data: ")) {
-                try {
-                  const data = JSON.parse(trimmed.slice(6));
-                  const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
-                  if (text) {
-                    controller.enqueue(encoder.encode(text));
-                  }
-                } catch {
-                  // 파싱 실패(미완성 청크 등)는 조용히 넘어감
+            for (const event of events) {
+              const eventTrimmed = event.trim();
+              if (!eventTrimmed) continue;
+
+              const lines = eventTrimmed.split("\n");
+              let dataContent = "";
+
+              for (const line of lines) {
+                const lineTrimmed = line.trim();
+                if (lineTrimmed.startsWith("data:")) {
+                  // Handle optional space after data:
+                  const valuePart = lineTrimmed.slice(5).startsWith(" ")
+                    ? lineTrimmed.slice(6)
+                    : lineTrimmed.slice(5);
+                  dataContent += valuePart;
                 }
+              }
+
+              const dataContentTrimmed = dataContent.trim();
+              if (!dataContentTrimmed || dataContentTrimmed === "[DONE]") {
+                continue;
+              }
+
+              try {
+                const data = JSON.parse(dataContentTrimmed);
+                if (data.error) {
+                  console.error("[docent:gemini] API error during stream:", data.error);
+                  controller.enqueue(
+                    encoder.encode(`\n\n(오류 발생: ${data.error.message || "알 수 없는 API 오류"})`)
+                  );
+                  return;
+                }
+                const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
+                if (text) {
+                  controller.enqueue(encoder.encode(text));
+                }
+              } catch (err) {
+                console.warn("[docent:gemini] Failed to parse SSE event JSON:", err, "Content:", dataContentTrimmed);
               }
             }
           }
 
-          // 버퍼에 남은 부분 처리
-          const trimmed = buffer.trim();
-          if (trimmed.startsWith("data: ")) {
-            try {
-              const data = JSON.parse(trimmed.slice(6));
-              const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
-              if (text) {
-                controller.enqueue(encoder.encode(text));
+          // Process remaining buffer
+          const normalizedRemaining = buffer.replace(/\r\n/g, "\n").trim();
+          if (normalizedRemaining) {
+            const lines = normalizedRemaining.split("\n");
+            let dataContent = "";
+            for (const line of lines) {
+              const lineTrimmed = line.trim();
+              if (lineTrimmed.startsWith("data:")) {
+                const valuePart = lineTrimmed.slice(5).startsWith(" ")
+                  ? lineTrimmed.slice(6)
+                  : lineTrimmed.slice(5);
+                dataContent += valuePart;
               }
-            } catch {
-              // ignore
+            }
+            const dataContentTrimmed = dataContent.trim();
+            if (dataContentTrimmed && dataContentTrimmed !== "[DONE]") {
+              try {
+                const data = JSON.parse(dataContentTrimmed);
+                if (!data.error) {
+                  const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
+                  if (text) {
+                    controller.enqueue(encoder.encode(text));
+                  }
+                }
+              } catch {
+                // ignore
+              }
             }
           }
 
