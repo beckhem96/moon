@@ -4,7 +4,7 @@ import { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import * as THREE from "three";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { Html, KeyboardControls, useGLTF, useKeyboardControls, useProgress } from "@react-three/drei";
+import { Html, KeyboardControls, useGLTF, useKeyboardControls, useProgress, useTexture } from "@react-three/drei";
 import type { ExhibitionRoom as Room, RoomPlacement } from "./exhibition";
 
 /** 02-spec F6 가상 전시관 — 분류별 단일 방, 키보드 1인칭 보행, 유물 실제 크기 전시.
@@ -100,10 +100,32 @@ function ScaleHuman({ x, z }: { x: number; z: number }) {
   );
 }
 
+function getCategoryScene(category: string): string {
+  switch (category) {
+    case "토기·도기":
+      return "/scenes/story-clay.jpg";
+    case "금속공예·장신구":
+      return "/scenes/story-silla.jpg";
+    case "청동기":
+      return "/scenes/story-tools.jpg";
+    case "불교조각":
+      return "/scenes/story-buddha.jpg";
+    case "도자기":
+      return "/scenes/story-celadon.jpg";
+    case "기타":
+    default:
+      return "/scenes/story-inscribed.jpg";
+  }
+}
+
 function RoomShell({ room }: { room: Room }) {
   const { bounds } = room;
   const centerZ = (bounds.minZ + bounds.maxZ) / 2;
   const length = bounds.maxZ - bounds.minZ + 4;
+
+  const sceneUrl = getCategoryScene(room.category);
+  const texture = useTexture(sceneUrl);
+
   return (
     <group>
       {/* 바닥 - 고급스러운 어두운 콘크리트/석재 느낌 */}
@@ -124,10 +146,10 @@ function RoomShell({ room }: { room: Room }) {
         <planeGeometry args={[WALL_X * 2, length]} />
         <meshStandardMaterial color="#020202" roughness={1} side={THREE.DoubleSide} />
       </mesh>
-      {/* 전방 벽 */}
+      {/* 전방 벽 - 테마 AI 벽화 */}
       <mesh position={[0, WALL_H / 2, bounds.maxZ + 2]}>
         <planeGeometry args={[WALL_X * 2, WALL_H]} />
-        <meshStandardMaterial color="#09090b" roughness={0.9} />
+        <meshStandardMaterial map={texture} roughness={0.8} metalness={0.1} emissive="#ffffff" emissiveIntensity={0.15} />
       </mesh>
     </group>
   );
